@@ -5,6 +5,9 @@
 bin/
 obj/
 
+# Program databases
+*.pdb
+
 .vs/
 .vscode/
 

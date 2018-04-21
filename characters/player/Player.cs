@@ -2,19 +2,9 @@ using Godot;
 using System;
 
 public class Player : KinematicBody2D {
-    [Export]
-    public int doorTileIndex = 3;
 
     [Export]
     public float speed = 100f;
-
-    public override void _Process(float delta) {
-        TileMap tileMap = GetParent() as TileMap;
-        Vector2 tileCoords = tileMap.WorldToMap(this.Position);
-        if (tileMap.GetCell((int) tileCoords.x, (int) tileCoords.y) == doorTileIndex) {
-            GD.Print("Door entered.");
-        }
-    }
 
     public override void _PhysicsProcess(float delta) {
         Vector2 movement = Vector2.Zero;
@@ -32,6 +22,6 @@ public class Player : KinematicBody2D {
             movement.x += 1;
         }
 
-        MoveAndSlide(movement * speed);
+        MoveAndSlide(movement.Normalized() * speed);
     }
 }
