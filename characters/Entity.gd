@@ -1,10 +1,15 @@
-extends Node
+extends KinematicBody2D
 
 const center = Vector2(0,0)
 const left = Vector2(-1,0)
 const right = Vector2(1,0)
 const up = Vector2(0,-1)
 const down = Vector2(0,1)
+var movedir = Vector2(0,0)
+const SPEED = 0
+
+func _physics_process(delta):
+	movement_loop()
 
 func rand():
 	var d = randi() % 4 + 1
@@ -17,3 +22,7 @@ func rand():
 			return up
 		4: 
 			return down
+
+func movement_loop():
+	var motion = movedir.normalized() * SPEED
+	move_and_slide(motion, Vector2(0,0))
