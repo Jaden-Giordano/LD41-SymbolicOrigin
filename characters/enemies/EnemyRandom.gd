@@ -2,12 +2,11 @@ extends "res://characters/entity.gd"
 
 const SPEED = 40
 
-var movetimer_length = 20
+var movetimer_length = 50
 var movetimer = 0
 
 func _ready():
 	movedir = rand()
-
 
 func _physics_process(delta):
 	if movetimer > 0:
