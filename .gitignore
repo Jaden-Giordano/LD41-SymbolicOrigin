@@ -4,6 +4,7 @@
 # Build results
 bin/
 obj/
+build/
 
 # Program databases
 *.pdb
