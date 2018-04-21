@@ -3,7 +3,7 @@ extends TileMap
 signal _door_trigger
 
 func _ready():
-    connect("_door_trigger", get_parent(), "_DoorEntered")
+    connect("_door_trigger", get_parent(), "_door_entered")
     pass
 
 func _door_entered(body, direction):
