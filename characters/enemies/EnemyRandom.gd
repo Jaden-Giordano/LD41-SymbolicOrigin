@@ -1,8 +1,8 @@
 extends "res://characters/entity.gd"
 
-const SPEED = 40
+const SPEED = 150
 
-var movetimer_length = 50
+var movetimer_length = 80
 var movetimer = 0
 
 func _ready():
