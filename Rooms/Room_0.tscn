@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://art/TestTileset.png" type="Texture" id=1]
-[ext_resource path="res://Rooms/MapManager.cs" type="Script" id=2]
+[ext_resource path="res://Rooms/map_manager.gd" type="Script" id=2]
 [ext_resource path="res://Rooms/Door.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -85,12 +85,12 @@ rotation = 1.5708
 position = Vector2( 0, 140 )
 rotation = 1.5708
 
-[connection signal="body_entered" from="RightDoor" to="." method="_DoorEntered" binds= [ 2 ]]
+[connection signal="body_entered" from="RightDoor" to="." method="_door_entered" binds= [ 2 ]]
 
-[connection signal="body_entered" from="LeftDoor" to="." method="_DoorEntered" binds= [ 0 ]]
+[connection signal="body_entered" from="LeftDoor" to="." method="_door_entered" binds= [ 0 ]]
 
-[connection signal="body_entered" from="TopDoor" to="." method="_DoorEntered" binds= [ 1 ]]
+[connection signal="body_entered" from="TopDoor" to="." method="_door_entered" binds= [ 1 ]]
 
-[connection signal="body_entered" from="BottomDoor" to="." method="_DoorEntered" binds= [ 3 ]]
+[connection signal="body_entered" from="BottomDoor" to="." method="_door_entered" binds= [ 3 ]]
 
 
