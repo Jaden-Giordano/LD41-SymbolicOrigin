@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/GameManager.gd" type="Script" id=1]
+[ext_resource path="res://scenes/care/CareFacility.tscn" type="PackedScene" id=2]
+
+[node name="Game" type="Node" index="0"]
+
+script = ExtResource( 1 )
+care_scene = "res://scenes/care/CareFacility.tscn"
+dungeon_scene = "res://scenes/dungeon/Dungeon.tscn"
+
+[node name="CareFacility" parent="." index="0" instance=ExtResource( 2 )]
+
+[connection signal="_enter_dungeon_triggered" from="CareFacility" to="." method="_enter_dungeon"]
+
+
