@@ -50,6 +50,6 @@ func _door_entered(direction):
         3: dir = Vector2(0, 1)
     
     current_room += dir
-    if load_room(current_room, 1):
+    if load_room(current_room, 0):
         get_node("Camera2D").position = current_room * MAP_POS_OFFSET
         get_node("Player").position = (current_room * MAP_POS_OFFSET) + (-dir * Vector2(1, 0.7) * 325)
