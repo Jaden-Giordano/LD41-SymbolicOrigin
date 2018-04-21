@@ -5,20 +5,19 @@
 
 [node name="Base" type="Node2D" index="0"]
 
-[node name="GameManager" type="Node2D" parent="." index="0"]
-
 script = ExtResource( 1 )
 basePath = "res://Rooms/Room_"
 sceneCount = 1
 
-[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( -209, 4.00003 )
 scale = Vector2( 2, 2 )
-_sections_unfolded = [ "Transform" ]
+z_index = 1
+_sections_unfolded = [ "Transform", "Z Index" ]
 speed = 250.0
 
-[node name="Camera2D" type="Camera2D" parent="." index="2"]
+[node name="Camera2D" type="Camera2D" parent="." index="1"]
 
 anchor_mode = 1
 rotating = false

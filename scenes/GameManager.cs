@@ -12,8 +12,6 @@ public class GameManager : Node2D {
 
     private Node[,] roomsGrid;
 
-    private bool first = false;
-
     public override void _Ready() {
         roomsGrid = new Node[100, 100];
 
@@ -21,19 +19,17 @@ public class GameManager : Node2D {
         for (int i = 0; i < sceneCount; i += 1) {
             loadScenes[i] = (PackedScene) ResourceLoader.Load(basePath + i + ".tscn");
         }
+
+        LoadRoom(new Vector2(50, 50), 0);
     }
 
     public Node LoadRoom(Vector2 position, int roomPath = 0) {
-        if (first) {
-            LoadRoom(new Vector2(50, 50), 0);
-            first = false;
-        }
 
         Node room = roomsGrid[(int) position.x, (int) position.y];
 
         if (room == null) {
             room = loadScenes[roomPath].Instance();
-            GetParent().AddChild(room);
+            AddChild(room);
         }
 
         return room;
