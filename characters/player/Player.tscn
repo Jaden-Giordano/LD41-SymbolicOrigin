@@ -6,6 +6,16 @@
 [node name="Player" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 speed = null
+
+[node name="Position2D" parent="." index="0"]
+
+editor/display_folded = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="Player" parent="Position2D" index="0"]
+
+scale = Vector2( 1.5, 1.5 )
 
 
