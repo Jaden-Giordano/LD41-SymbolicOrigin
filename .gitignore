@@ -1,0 +1,12 @@
+# User-specific files
+*.suo
+
+# Build results
+bin/
+obj/
+
+.vs/
+.vscode/
+
+# MacOS finder makes these.
+.DS_Store
