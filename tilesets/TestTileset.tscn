@@ -21,4 +21,13 @@ region_enabled = true
 region_rect = Rect2( 16, 0, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
+[node name="Door" type="Sprite" parent="." index="2"]
+
+position = Vector2( 0, 32 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
 
