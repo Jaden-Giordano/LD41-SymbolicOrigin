@@ -8,6 +8,7 @@
 script = ExtResource( 1 )
 basePath = "res://Rooms/Room_"
 sceneCount = 1
+paths = PoolStringArray( "res://Rooms/Room_0.tscn" )
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
