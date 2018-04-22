@@ -32,7 +32,7 @@ tracks/0/keys = {
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
-speed = 100
+speed = 50
 timerMovement = true
 
 [node name="Body" parent="Position2D" index="0"]
