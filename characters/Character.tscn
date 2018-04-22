@@ -17,7 +17,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Position2D" type="Position2D" parent="." index="0"]
 
-[node name="Player" type="Sprite" parent="Position2D" index="0"]
+[node name="Body" type="Sprite" parent="Position2D" index="0"]
 
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -25,5 +25,14 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+
+[node name="Anim" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+blend_times = [  ]
 
 

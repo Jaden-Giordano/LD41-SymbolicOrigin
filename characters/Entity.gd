@@ -11,6 +11,12 @@ const SPEED = 0
 func _physics_process(delta):
 	movement_loop()
 
+func _process(delta):
+	if movedir.x == 1:
+		get_node("Position2D/Body").flip_h = true
+	else:
+		get_node("Position2D/Body").flip_h = false
+
 func rand():
 	var d = randi() % 4 + 1
 	match d:
