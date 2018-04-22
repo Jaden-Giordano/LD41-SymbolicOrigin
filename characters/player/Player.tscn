@@ -1,41 +1,16 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://characters/Character.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/animated pets-1.png" type="Texture" id=2]
-[ext_resource path="res://assets/light.png" type="Texture" id=3]
+[ext_resource path="res://characters/player/Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/animated pets-1.png" type="Texture" id=3]
+[ext_resource path="res://assets/light.png" type="Texture" id=4]
 
-[sub_resource type="GDScript" id=1]
-
-script/source = "extends KinematicBody2D
-
-export(int) var speed
-
-func _ready():
-    set_physics_process(true);
-
-func _physics_process(delta):
-	var movement = Vector2(0, 0)
-
-	if Input.is_action_pressed(\"move_left\"):
-		movement.x -= 1
-		get_node(\"Position2D/Body\").flip_h = false
-	if Input.is_action_pressed(\"move_right\"):
-		movement.x += 1
-		get_node(\"Position2D/Body\").flip_h = true
-	if Input.is_action_pressed(\"move_up\"):
-		movement.y -= 1
-	if Input.is_action_pressed(\"move_down\"):
-		movement.y += 1
-
-	move_and_slide(movement.normalized() * speed)
-"
-
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 5.17104, 3.36783 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 length = 0.6
 loop = true
@@ -55,8 +30,7 @@ tracks/0/keys = {
 
 [node name="Player" instance=ExtResource( 1 )]
 
-script = SubResource( 1 )
-speed = null
+script = ExtResource( 2 )
 
 [node name="Position2D" parent="." index="0"]
 
@@ -64,7 +38,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Body" parent="Position2D" index="0"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 vframes = 6
 hframes = 4
 frame = 4
@@ -73,18 +47,18 @@ _sections_unfolded = [ "Animation", "Transform" ]
 [node name="CollisionShape2D" parent="." index="1"]
 
 position = Vector2( 0, 1.62375 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Anim" parent="." index="2"]
 
 autoplay = "Move"
-anims/Move = SubResource( 3 )
+anims/Move = SubResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="." index="3"]
 
 enabled = true
 editor_only = false
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 offset = Vector2( 0, 0 )
 texture_scale = 2.0
 color = Color( 1, 1, 1, 1 )
