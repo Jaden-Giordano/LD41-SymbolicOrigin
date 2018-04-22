@@ -54,4 +54,4 @@ func _door_entered(direction):
 
 		if load_room(current_room, (randi() % (paths.size() - 1)) + 1):
 			get_node("Camera2D").position = current_room * MAP_POS_OFFSET
-			get_node("Player").position = (current_room * MAP_POS_OFFSET) + (-dir * Vector2(1, 0.7) * 325)
+			get_node("Player").position = (current_room * MAP_POS_OFFSET) + (-dir * Vector2(0.5, 0.375) * 325)
