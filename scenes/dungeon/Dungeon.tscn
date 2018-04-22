@@ -44,7 +44,7 @@ _sections_unfolded = [ "Offset", "Smoothing" ]
 [node name="ModulateWorld" type="CanvasModulate" parent="." index="2"]
 
 show_behind_parent = true
-color = Color( 0.0526114, 0.02948, 0.164063, 1 )
+color = Color( 0.0183535, 0.010376, 0.15625, 1 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Theme" type="AudioStreamPlayer" parent="." index="3"]
