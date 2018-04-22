@@ -31,7 +31,7 @@ tracks/0/keys = {
 [node name="EnemyFollowing" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-speed = 150
+speed = 50
 
 [node name="Position2D" parent="." index="0"]
 

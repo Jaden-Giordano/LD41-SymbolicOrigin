@@ -1,6 +1,6 @@
 extends "res://characters/entity.gd"
 
-export var speed = 150
+export var speed = 100
 export var timerMovement = true
 
 func _ready():

@@ -1,6 +1,6 @@
 extends "res://characters/Entity.gd"
 
-export var speed = 150
+export var speed = 50
 var playerPosition = Vector2()
 
 func _ready():

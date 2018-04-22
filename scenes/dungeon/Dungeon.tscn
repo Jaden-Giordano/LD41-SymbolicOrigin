@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/dungeon/DungeonManager.gd" type="Script" id=1]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
 
-[node name="Dungeon" type="Node2D" index="0"]
+[node name="Dungeon" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -15,7 +15,7 @@ position = Vector2( -128.463, 1.05966 )
 scale = Vector2( 2, 2 )
 z_index = 1
 _sections_unfolded = [ "Transform", "Z Index" ]
-speed = 250
+speed = 150
 
 [node name="Camera2D" type="Camera2D" parent="." index="1"]
 
