@@ -37,16 +37,15 @@ func _enter_dungeon():
 	add_child(load(dungeon_scene).instance())
 
 func _open_food_inventory():
-	# Load food inventory scene
-	var food_inv = food_inv_scene_loaded.instance()
-	for i in range(4):
-		var item = food_inv.get_node("Slots/" + String(i))
-		if !can_buy: item.disabled = true
-		item.icon = food_icons[i]
-		item.set_text(String(food_costs[i]))
-		
-	add_child(food_inv)
-	inv_open = true
+	if !inv_open:
+		# Load food inventory scene
+		var food_inv = food_inv_scene_loaded.instance()
+		for i in range(4):
+			var item = food_inv.get_node("Slots/" + String(i))
+			if !can_buy: item.disabled = true
+		add_child(food_inv)		
+			
+		inv_open = true
 
 func _close_feed_inventory():
 	remove_child(get_node("FoodInventory"))
@@ -66,6 +65,20 @@ func _buy_food(type):
 		can_buy = false
 		_close_feed_inventory()
 		_open_food_inventory()
+
+func _on_training_ended(type):
+	stats.status = 0
+	match type:
+		0: stats.speed += 1
+		1: stats.strength += 1
+
+func _on_speed_train():
+	if stats.status == 0:
+		stats.status = 1
+
+func _on_strength_train():
+	if stats.status == 0:
+		stats.status = 1
 
 # Dungeon
 func _exit_dungeon():

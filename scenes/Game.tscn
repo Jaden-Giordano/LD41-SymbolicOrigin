@@ -31,9 +31,11 @@ script = ExtResource( 7 )
 [node name="FoodTimer" type="Timer" parent="." index="2"]
 
 process_mode = 1
-wait_time = 15.0
+wait_time = 30.0
 one_shot = false
 autostart = false
+
+[connection signal="_force_out_dungeon" from="Stats" to="." method="_exit_dungeon"]
 
 [connection signal="timeout" from="FoodTimer" to="." method="_can_buy_again"]
 

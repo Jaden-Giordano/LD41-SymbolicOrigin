@@ -24,9 +24,9 @@ func _process(delta):
 		if hunger_timer >= 1:
 			hunger_timer = 0
 			if status == 0:
-				hunger += 0.1
+				hunger += 0.25
 			elif status == 1:
-				hunger += 0.2
+				hunger += 5
 		hunger = clamp(hunger, 0, 100)
 
 		if hunger == 100:
@@ -34,9 +34,7 @@ func _process(delta):
 			if hunger_health_loss_timer >= 1:
 				hunger_health_loss_timer = 0
 				if status == 0:
-					health -= 2
-				elif status == 1:
-					health -= 4
+					health -= 0.5
 		if health < 0:
 			health = 0
 			status = 2

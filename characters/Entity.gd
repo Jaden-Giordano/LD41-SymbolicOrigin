@@ -39,5 +39,5 @@ func rand():
 			return right+down
 
 func movement_loop():
-	var motion = movedir.normalized() * ((0.5 * log(stats.speed)) + 0.5) * 100
+	var motion = movedir.normalized() * ((0.5 * log(stats.speed / 8)) + 0.5) * 100
 	move_and_slide(motion, Vector2(0,0))
