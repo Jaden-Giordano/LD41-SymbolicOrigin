@@ -18,7 +18,7 @@ func _process(delta):
 		get_node("Position2D/Body").flip_h = false
 
 func rand():
-	var d = randi() % 4 + 1
+	var d = randi() % 8 + 1
 	match d:
 		1:
 			return left
@@ -28,6 +28,14 @@ func rand():
 			return up
 		4: 
 			return down
+		5:
+			return left+up
+		6: 
+			return right+up
+		7:
+			return left+down
+		8: 
+			return right+down
 
 func movement_loop():
 	var motion = movedir.normalized() * SPEED
