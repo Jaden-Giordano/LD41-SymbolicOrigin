@@ -6,6 +6,8 @@
 [node name="EnemyRandom" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+speed = 150
+timerMovement = true
 
 [node name="Position2D" parent="." index="0"]
 
@@ -15,5 +17,14 @@ editor/display_folded = false
 
 modulate = Color( 1, 0, 0, 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="MoveTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_MoveTimer_timeout"]
 
 
