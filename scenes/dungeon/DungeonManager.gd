@@ -41,15 +41,17 @@ func _ready():
 
 
 func _door_entered(direction):
-	var dir = Vector2(0, 0)
+	if paths.size() > 1:
+		var dir = Vector2(0, 0)
 
-	match direction:
-		0: dir = Vector2(-1, 0)
-		1: dir = Vector2(0, -1)
-		2: dir = Vector2(1, 0)
-		3: dir = Vector2(0, 1)
+		match direction:
+			0: dir = Vector2(-1, 0)
+			1: dir = Vector2(0, -1)
+			2: dir = Vector2(1, 0)
+			3: dir = Vector2(0, 1)
 
-	current_room += dir
-	if load_room(current_room, 0):
-		get_node("Camera2D").position = current_room * MAP_POS_OFFSET
-		get_node("Player").position = (current_room * MAP_POS_OFFSET) + (-dir * Vector2(1, 0.7) * 325)
+		current_room += dir
+
+		if load_room(current_room, (randi() % (paths.size() - 1)) + 1):
+			get_node("Camera2D").position = current_room * MAP_POS_OFFSET
+			get_node("Player").position = (current_room * MAP_POS_OFFSET) + (-dir * Vector2(1, 0.7) * 325)

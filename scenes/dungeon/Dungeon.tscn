@@ -7,11 +7,10 @@
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-paths = PoolStringArray( "res://rooms/Room_1.tscn" )
+paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_1.tscn" )
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( -128.463, 1.05966 )
 z_index = 1
 _sections_unfolded = [ "Transform", "Z Index" ]
 speed = 80
