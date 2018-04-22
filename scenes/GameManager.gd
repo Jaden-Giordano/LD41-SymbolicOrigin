@@ -7,8 +7,21 @@ export(String) var dungeon_scene
 export(String) var food_inventory_scene
 var food_inv_scene_loaded
 
+export(Texture) var simple_food
+export(Texture) var nutritious_food
+export(Texture) var vitamin_food
+export(Texture) var protein_food
+
 onready var stats = get_node("Stats")
 onready var inventory = get_node("Inventory")
+
+onready var food_icons = [simple_food, nutritious_food, vitamin_food, protein_food]
+var food_costs = [10, 50, 50, 50]
+
+func _input(event):
+	if event is InputEventAction:
+		if event.pressed and event.action == "ui_cancel":
+			_exit_dungeon()
 
 func _ready():
 	food_inv_scene_loaded = load(food_inventory_scene)
@@ -22,13 +35,11 @@ func _enter_dungeon():
 func _open_food_inventory():
 	# Load food inventory scene
 	var food_inv = food_inv_scene_loaded.instance()
-	for i in range(9):
-		food_inv.get_node("Slots/" + String(i)).disabled = true
-
-	for i in range(inventory.foods.size()):
+	for i in range(4):
 		var item = food_inv.get_node("Slots/" + String(i))
-		item.set_text(String(inventory.foods[i]))
-		item.disabled = false
+		item.icon = food_icons[i]
+		item.set_text(String(food_costs[i]))
+		
 	add_child(food_inv)
 
 func _close_feed_inventory():
@@ -38,6 +49,9 @@ func _close_feed_inventory():
 func _exit_dungeon():
 	remove_child(get_node("Dungeon"))
 	add_child(load(care_scene).instance())
+
+func _on_food_pickup(object, type):
+	inventory.add_food(type)
 
 # Menu
 func _menu_play():

@@ -1,23 +1,31 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/GameManager.gd" type="Script" id=1]
-[ext_resource path="res://characters/Stats.gd" type="Script" id=2]
-[ext_resource path="res://characters/Inventory.gd" type="Script" id=3]
+[ext_resource path="res://assets/foods/simple.png" type="Texture" id=2]
+[ext_resource path="res://assets/foods/nutritious.png" type="Texture" id=3]
+[ext_resource path="res://assets/foods/vitamin.png" type="Texture" id=4]
+[ext_resource path="res://assets/foods/protein.png" type="Texture" id=5]
+[ext_resource path="res://characters/Stats.gd" type="Script" id=6]
+[ext_resource path="res://characters/Inventory.gd" type="Script" id=7]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 menu_scene = "res://scenes/menu/MainMenu.tscn"
 care_scene = "res://scenes/care/CareFacility.tscn"
 dungeon_scene = "res://scenes/dungeon/Dungeon.tscn"
 food_inventory_scene = "res://scenes/care/inventory/FoodInventory.tscn"
+simple_food = ExtResource( 2 )
+nutritious_food = ExtResource( 3 )
+vitamin_food = ExtResource( 4 )
+protein_food = ExtResource( 5 )
 
 [node name="Stats" type="Node" parent="." index="0"]
 
-script = ExtResource( 2 )
+script = ExtResource( 6 )
 
 [node name="Inventory" type="Node" parent="." index="1"]
 
-script = ExtResource( 3 )
+script = ExtResource( 7 )
 
 
