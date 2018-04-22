@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD41DUNGEONDEMO.ogg-25c62c8c275763b151d008174a11d02b.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/LD41DUNGEONDEMO.ogg"
+source_md5="fbcf8d2417602552b15b02d725f97c69"
+
+dest_files=[ "res://.import/LD41DUNGEONDEMO.ogg-25c62c8c275763b151d008174a11d02b.oggstr" ]
+dest_md5="6f5acbbb3954339c04cf6bada0adeb2b"
+
+[params]
+
+loop=true
+loop_offset=0

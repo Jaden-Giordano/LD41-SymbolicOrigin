@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/dungeon/DungeonManager.gd" type="Script" id=1]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/sound/LD41DUNGEONDEMO.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sound/LD41DUNGEONDEMO.ogg" type="AudioStream" id=3]
 
 [node name="Dungeon" type="Node2D" index="0"]
 
@@ -45,7 +45,7 @@ _sections_unfolded = [ "Offset", "Smoothing" ]
 [node name="ModulateWorld" type="CanvasModulate" parent="." index="2"]
 
 show_behind_parent = true
-color = Color( 0.0976944, 0.0753784, 0.253906, 1 )
+color = Color( 0.0526114, 0.02948, 0.164063, 1 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Theme" type="AudioStreamPlayer" parent="." index="3"]
