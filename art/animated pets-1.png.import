@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EnterDungeonButton.png-69bd49760f0ec150ccfde343cfaed921.stex"
+path="res://.import/animated pets-1.png-b9f2873bc97c7939da7621ff7e80393f.stex"
 
 [deps]
 
-source_file="res://art/EnterDungeonButton.png"
-source_md5="0d7d848daf5e5b3ceb2c70d83918e8a6"
+source_file="res://art/animated pets-1.png"
+source_md5="df065488169cd18ffe1cb8750eec023f"
 
-dest_files=[ "res://.import/EnterDungeonButton.png-69bd49760f0ec150ccfde343cfaed921.stex" ]
-dest_md5="b0ff9022885148cd6ae6fef3802af1d5"
+dest_files=[ "res://.import/animated pets-1.png-b9f2873bc97c7939da7621ff7e80393f.stex" ]
+dest_md5="b55a0039ecd3f20794c5bf21317dc060"
 
 [params]
 

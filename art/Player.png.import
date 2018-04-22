@@ -7,7 +7,10 @@ path="res://.import/Player.png-5895584d761f8b8032eca49b690e42b7.stex"
 [deps]
 
 source_file="res://art/Player.png"
+source_md5="6b42aedd4e843192ac7e78fde3979d79"
+
 dest_files=[ "res://.import/Player.png-5895584d761f8b8032eca49b690e42b7.stex" ]
+dest_md5="f43d90c2c5f9d1fb39aa5395a8fa32c6"
 
 [params]
 
@@ -25,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

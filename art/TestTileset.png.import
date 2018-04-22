@@ -7,7 +7,10 @@ path="res://.import/TestTileset.png-1dd78ee58169b1fce6bbd66ff624da63.stex"
 [deps]
 
 source_file="res://art/TestTileset.png"
+source_md5="5bdc6ad8906283d16a77a3c8ead126fa"
+
 dest_files=[ "res://.import/TestTileset.png-1dd78ee58169b1fce6bbd66ff624da63.stex" ]
+dest_md5="811f615fcbac2ad68490c4b7c3babe7d"
 
 [params]
 
@@ -25,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

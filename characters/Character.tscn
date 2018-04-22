@@ -5,22 +5,20 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 8, 8 )
 
-[node name="Character" type="KinematicBody2D" index="0"]
+[node name="Character" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
+_sections_unfolded = [ "Transform" ]
 
 [node name="Position2D" type="Position2D" parent="." index="0"]
 
-editor/display_folded = true
-
 [node name="Player" type="Sprite" parent="Position2D" index="0"]
 
-scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 

@@ -10,7 +10,7 @@ source_file="res://art/tileset.png"
 source_md5="4b7aeb93848a4792c71aba49ce1da54f"
 
 dest_files=[ "res://.import/tileset.png-9a7aa93aa20d6fc1a677061e224b6b5b.stex" ]
-dest_md5="5e9db4fccadf0f984a84df45725af4a6"
+dest_md5="60f9af24ebc62aa201f194ada27e8cc9"
 
 [params]
 
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
