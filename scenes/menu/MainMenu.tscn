@@ -10,7 +10,6 @@ script = ExtResource( 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -45,16 +44,31 @@ texture = ExtResource( 2 )
 stretch_mode = 0
 _sections_unfolded = [ "Margin" ]
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="." index="1"]
+[node name="CenterContainer2" type="CenterContainer" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 60.0
-margin_top = 137.0
-margin_right = 188.0
-margin_bottom = 209.0
+margin_left = 168.0
+margin_top = 113.0
+margin_right = 232.0
+margin_bottom = 187.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -63,15 +77,15 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 3 )
 alignment = 1
-_sections_unfolded = [ "Margin", "Theme" ]
+_sections_unfolded = [ "Grow Direction", "Margin" ]
 
-[node name="Play" type="Button" parent="VBoxContainer2" index="0"]
+[node name="Play" type="Button" parent="CenterContainer2/VBoxContainer2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 128.0
+margin_right = 64.0
 margin_bottom = 22.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -88,14 +102,14 @@ text = "Play"
 flat = false
 align = 1
 
-[node name="Settings" type="Button" parent="VBoxContainer2" index="1"]
+[node name="Settings" type="Button" parent="CenterContainer2/VBoxContainer2" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 26.0
-margin_right = 128.0
+margin_right = 64.0
 margin_bottom = 48.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -112,14 +126,14 @@ text = "Settings"
 flat = false
 align = 1
 
-[node name="Quit" type="Button" parent="VBoxContainer2" index="2"]
+[node name="Quit" type="Button" parent="CenterContainer2/VBoxContainer2" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 52.0
-margin_right = 128.0
+margin_right = 64.0
 margin_bottom = 74.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -136,10 +150,44 @@ text = "Quit"
 flat = false
 align = 1
 
-[connection signal="pressed" from="VBoxContainer2/Play" to="." method="_button_pressed" binds= [ 0 ]]
+[node name="Background" type="ParallaxBackground" parent="." index="2"]
 
-[connection signal="pressed" from="VBoxContainer2/Settings" to="." method="_button_pressed" binds= [ 1 ]]
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
 
-[connection signal="pressed" from="VBoxContainer2/Quit" to="." method="_button_pressed" binds= [ 2 ]]
+[node name="ColorRect" type="ColorRect" parent="Background" index="0"]
+
+show_behind_parent = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -342.0
+margin_top = -60.0
+margin_right = 752.0
+margin_bottom = 429.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.0792885, 0.0495911, 0.101563, 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[connection signal="pressed" from="CenterContainer2/VBoxContainer2/Play" to="." method="_button_pressed" binds= [ 0 ]]
+
+[connection signal="pressed" from="CenterContainer2/VBoxContainer2/Settings" to="." method="_button_pressed" binds= [ 1 ]]
+
+[connection signal="pressed" from="CenterContainer2/VBoxContainer2/Quit" to="." method="_button_pressed" binds= [ 2 ]]
 
 
