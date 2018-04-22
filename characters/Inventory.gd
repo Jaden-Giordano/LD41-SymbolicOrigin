@@ -1,9 +1,9 @@
 extends Node
 
-var foods = [0, 0, 1, 0, 2, 1, 2, 1]
+var items = []
 
-func add_food(type):
-	foods.append(type)
+func add_item(type):
+	items.append(type)
 
-func remove_food(type):
-	foods.erase(type)
+func remove_item(type):
+	items.erase(type)

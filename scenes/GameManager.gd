@@ -50,9 +50,6 @@ func _exit_dungeon():
 	remove_child(get_node("Dungeon"))
 	add_child(load(care_scene).instance())
 
-func _on_food_pickup(object, type):
-	inventory.add_food(type)
-
 # Menu
 func _menu_play():
 	remove_child(get_node("MainMenu"))
