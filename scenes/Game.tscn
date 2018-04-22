@@ -28,4 +28,13 @@ script = ExtResource( 6 )
 
 script = ExtResource( 7 )
 
+[node name="FoodTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 15.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="FoodTimer" to="." method="_can_buy_again"]
+
 

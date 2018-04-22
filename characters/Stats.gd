@@ -11,6 +11,8 @@ var strength = 1
 
 var status = 0 # 0 = Inactive, 1 = Active, 2 = Dead
 
+var coins = 10
+
 var hunger_timer = 0
 var hunger_health_loss_timer = 0
 
@@ -40,15 +42,15 @@ func _process(delta):
 func eat_food(type):
 	match type:
 		0: # Nutritious (Health)
-			hunger -= 10
+			hunger -= 100
 			max_health += 5
 			health += 5
 			speed -= 1
 		1: # Vitamins (Speed)
-			hunger -= 5
+			hunger -= 100
 			speed += 1
 		2: # Protien (Strength)
-			hunger -= 35
+			hunger -= 100
 			speed -= 1
 			strength += 1
 	

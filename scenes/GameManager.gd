@@ -17,6 +17,8 @@ onready var inventory = get_node("Inventory")
 
 onready var food_icons = [simple_food, nutritious_food, vitamin_food, protein_food]
 var food_costs = [10, 50, 50, 50]
+var can_buy = true
+var inv_open = false
 
 func _input(event):
 	if event is InputEventAction:
@@ -37,13 +39,31 @@ func _open_food_inventory():
 	var food_inv = food_inv_scene_loaded.instance()
 	for i in range(4):
 		var item = food_inv.get_node("Slots/" + String(i))
+		if !can_buy: item.disabled = true
 		item.icon = food_icons[i]
 		item.set_text(String(food_costs[i]))
 		
 	add_child(food_inv)
+	inv_open = true
 
 func _close_feed_inventory():
 	remove_child(get_node("FoodInventory"))
+	inv_open = false
+
+func _can_buy_again():
+	can_buy = true
+	if inv_open:
+		_close_feed_inventory()
+		_open_food_inventory()
+
+func _buy_food(type):
+	if can_buy and stats.coins >= food_costs[type]:
+		_feed(type)
+		stats.coins -= food_costs[type]
+		get_node("FoodTimer").start()
+		can_buy = false
+		_close_feed_inventory()
+		_open_food_inventory()
 
 # Dungeon
 func _exit_dungeon():
