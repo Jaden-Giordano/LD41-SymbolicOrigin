@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/dungeon/DungeonManager.gd" type="Script" id=1]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/sound/LD41DUNGEONDEMO.wav" type="AudioStream" id=3]
 
 [node name="Dungeon" type="Node2D" index="0"]
 
@@ -40,5 +41,19 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Offset", "Smoothing" ]
+
+[node name="ModulateWorld" type="CanvasModulate" parent="." index="2"]
+
+show_behind_parent = true
+color = Color( 0.0976944, 0.0753784, 0.253906, 1 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="Theme" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 3 )
+volume_db = -10.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 
