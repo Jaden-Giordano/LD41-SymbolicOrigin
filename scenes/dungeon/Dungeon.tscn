@@ -12,7 +12,6 @@ paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_1.tscn", "
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 20, 0 )
 z_index = 1
 _sections_unfolded = [ "Transform", "Z Index" ]
 

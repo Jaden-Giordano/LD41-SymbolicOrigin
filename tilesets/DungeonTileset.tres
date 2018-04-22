@@ -7,19 +7,19 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8, 8 )
 
-[sub_resource type="OccluderPolygon2D" id=6]
-
-closed = true
-cull_mode = 0
-polygon = PoolVector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
-
-[sub_resource type="OccluderPolygon2D" id=5]
+[sub_resource type="OccluderPolygon2D" id=2]
 
 closed = true
 cull_mode = 0
 polygon = PoolVector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
 
 [sub_resource type="OccluderPolygon2D" id=3]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
+
+[sub_resource type="OccluderPolygon2D" id=4]
 
 closed = true
 cull_mode = 0
@@ -162,7 +162,7 @@ polygon = PoolVector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
 12/region = Rect2( 32, 0, 16, 16 )
 12/is_autotile = false
 12/occluder_offset = Vector2( 8, 8 )
-12/occluder = SubResource( 6 )
+12/occluder = SubResource( 2 )
 12/navigation_offset = Vector2( 8, 8 )
 12/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
@@ -177,7 +177,7 @@ polygon = PoolVector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
 13/region = Rect2( 48, 0, 16, 16 )
 13/is_autotile = false
 13/occluder_offset = Vector2( 8, 8 )
-13/occluder = SubResource( 5 )
+13/occluder = SubResource( 3 )
 13/navigation_offset = Vector2( 8, 8 )
 13/shapes = [  ]
 14/name = "WallTopCorner"
@@ -187,7 +187,7 @@ polygon = PoolVector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
 14/region = Rect2( 32, 16, 16, 16 )
 14/is_autotile = false
 14/occluder_offset = Vector2( 8, 8 )
-14/occluder = SubResource( 3 )
+14/occluder = SubResource( 4 )
 14/navigation_offset = Vector2( 8, 8 )
 14/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),

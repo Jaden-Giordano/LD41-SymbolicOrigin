@@ -35,6 +35,7 @@ func _ready():
 
 	# Load in the paths
 	for path in paths:
+		print(path)
 		loaded_scenes.append(load(path))
 	
 	load_room(Vector2(0, 0), 0)
@@ -51,6 +52,7 @@ func _door_entered(direction):
 			3: dir = Vector2(0, 1)
 
 		current_room += dir
+
 
 		if load_room(current_room, (randi() % (paths.size() - 1)) + 1):
 			get_node("Camera2D").position = current_room * MAP_POS_OFFSET

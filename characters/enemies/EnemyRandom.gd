@@ -1,4 +1,4 @@
-extends "res://characters/entity.gd"
+extends "res://characters/Entity.gd"
 
 export var timerMovement = true
 
