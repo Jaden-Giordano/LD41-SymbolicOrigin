@@ -202,6 +202,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="WallTopCorner" type="Sprite" parent="." index="14"]
 
+editor/display_folded = true
 position = Vector2( 0, 48 )
 texture = ExtResource( 1 )
 region_enabled = true

@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://scenes/care/CareFacility.tscn" type="PackedScene" id=2]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 care_scene = "res://scenes/care/CareFacility.tscn"
