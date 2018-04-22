@@ -41,10 +41,10 @@ texture = ExtResource( 3 )
 vframes = 6
 hframes = 4
 frame = 7
-_sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="CollisionShape2D" parent="." index="1"]
 
+position = Vector2( 0, 3.77874 )
 shape = SubResource( 1 )
 
 [node name="MoveTimer" type="Timer" parent="." index="2"]
