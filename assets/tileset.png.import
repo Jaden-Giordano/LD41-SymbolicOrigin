@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EnterDungeonButton.png-69bd49760f0ec150ccfde343cfaed921.stex"
+path="res://.import/tileset.png-c50288acd069fa293d7940a084811264.stex"
 
 [deps]
 
-source_file="res://art/EnterDungeonButton.png"
-source_md5="0d7d848daf5e5b3ceb2c70d83918e8a6"
+source_file="res://assets/tileset.png"
+source_md5="4b7aeb93848a4792c71aba49ce1da54f"
 
-dest_files=[ "res://.import/EnterDungeonButton.png-69bd49760f0ec150ccfde343cfaed921.stex" ]
-dest_md5="b0ff9022885148cd6ae6fef3802af1d5"
+dest_files=[ "res://.import/tileset.png-c50288acd069fa293d7940a084811264.stex" ]
+dest_md5="60f9af24ebc62aa201f194ada27e8cc9"
 
 [params]
 

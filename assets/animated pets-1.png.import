@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/animated pets-1.png-b1b2b1339f28401680d25eb88575af52.stex"
+
+[deps]
+
+source_file="res://assets/animated pets-1.png"
+source_md5="df065488169cd18ffe1cb8750eec023f"
+
+dest_files=[ "res://.import/animated pets-1.png-b1b2b1339f28401680d25eb88575af52.stex" ]
+dest_md5="b55a0039ecd3f20794c5bf21317dc060"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
