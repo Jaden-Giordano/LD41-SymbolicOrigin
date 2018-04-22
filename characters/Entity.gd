@@ -6,7 +6,8 @@ const right = Vector2(1,0)
 const up = Vector2(0,-1)
 const down = Vector2(0,1)
 var movedir = Vector2(0,0)
-const SPEED = 0
+
+onready var stats = get_node("Stats")
 
 func _physics_process(delta):
 	movement_loop()
@@ -38,5 +39,5 @@ func rand():
 			return right+down
 
 func movement_loop():
-	var motion = movedir.normalized() * SPEED
+	var motion = movedir.normalized() * ((0.5 * log(stats.speed)) + 0.5) * 100
 	move_and_slide(motion, Vector2(0,0))

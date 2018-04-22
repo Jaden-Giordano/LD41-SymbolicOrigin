@@ -1,10 +1,8 @@
 extends "res://characters/entity.gd"
 
-export var speed = 50
 export var timerMovement = true
 
 func _ready():
-	SPEED = speed
 	movedir = rand()
 
 func _physics_process(delta):
