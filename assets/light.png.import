@@ -7,10 +7,10 @@ path="res://.import/light.png-87539b10c4b4cebc046b6b91ffea6f69.stex"
 [deps]
 
 source_file="res://assets/light.png"
-source_md5="78b51aeb63acc619eb61217cca26afcf"
+source_md5="f778ee13a8b7c3f7fee4cf99ff2b18bb"
 
 dest_files=[ "res://.import/light.png-87539b10c4b4cebc046b6b91ffea6f69.stex" ]
-dest_md5="b0659b416409b03e479e585df31e9b06"
+dest_md5="e966af52b1620c8019289d9862f24d00"
 
 [params]
 
