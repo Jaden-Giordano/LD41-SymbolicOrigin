@@ -1,6 +1,8 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="FoodItem" type="Node"]
+[ext_resource path="res://assets/theme.tres" type="Theme" id=1]
+
+[node name="FoodItem" type="Node" index="0"]
 
 [node name="Button" type="Button" parent="." index="0"]
 
@@ -17,11 +19,13 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
 flat = false
 align = 1
+_sections_unfolded = [ "Theme" ]
 
 

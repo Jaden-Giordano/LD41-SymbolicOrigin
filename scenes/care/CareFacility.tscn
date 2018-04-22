@@ -1,13 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/care/CareManager.gd" type="Script" id=1]
-[ext_resource path="res://assets/ui/health.png" type="Texture" id=2]
-[ext_resource path="res://assets/ui/hunger.png" type="Texture" id=3]
-[ext_resource path="res://assets/care/pool.png" type="Texture" id=4]
-[ext_resource path="res://characters/player/CarePlayer.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/care/wheel.png" type="Texture" id=6]
+[ext_resource path="res://assets/theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/ui/health.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/hunger.png" type="Texture" id=4]
+[ext_resource path="res://assets/care/pool.png" type="Texture" id=5]
+[ext_resource path="res://characters/player/CarePlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/care/wheel.png" type="Texture" id=7]
 
-[node name="CareFacility" type="Node"]
+[node name="CareFacility" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -27,6 +28,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 alignment = 0
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer" index="0"]
@@ -43,7 +45,8 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+theme = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="TextureRect2" type="TextureRect" parent="VBoxContainer" index="1"]
@@ -61,7 +64,8 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+theme = ExtResource( 2 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 
 [node name="Bars" type="VBoxContainer" parent="." index="1"]
@@ -80,6 +84,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 alignment = 0
 _sections_unfolded = [ "Margin" ]
 
@@ -97,6 +102,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
+theme = ExtResource( 2 )
 min_value = 0.0
 max_value = 100.0
 step = 1.0
@@ -122,6 +128,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
+theme = ExtResource( 2 )
 min_value = 0.0
 max_value = 100.0
 step = 1.0
@@ -146,6 +153,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 alignment = 2
 _sections_unfolded = [ "Margin" ]
 
@@ -155,9 +163,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 237.0
-margin_right = 280.0
-margin_bottom = 20.0
+margin_left = 243.0
+margin_right = 283.0
+margin_bottom = 22.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -165,6 +173,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -179,9 +188,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 284.0
+margin_left = 287.0
 margin_right = 390.0
-margin_bottom = 20.0
+margin_bottom = 22.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -189,6 +198,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -214,14 +224,15 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 4 )
+texture_normal = ExtResource( 5 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Player" parent="Pool" index="0" instance=ExtResource( 5 )]
+[node name="Player" parent="Pool" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( -86.4795, 38.7828 )
 
@@ -242,11 +253,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 7 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="Coins" type="Label" parent="." index="5"]
@@ -265,6 +277,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+theme = ExtResource( 2 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
