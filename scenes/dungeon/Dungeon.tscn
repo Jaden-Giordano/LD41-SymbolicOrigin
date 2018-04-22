@@ -4,11 +4,11 @@
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/sound/LD41DUNGEONDEMO.ogg" type="AudioStream" id=3]
 
-[node name="Dungeon" type="Node2D"]
+[node name="Dungeon" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_1.tscn", "res://rooms/Room_2.tscn", "res://rooms/Room_3.tscn", "res://rooms/Room_4.tscn" )
+paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_1.tscn" )
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 

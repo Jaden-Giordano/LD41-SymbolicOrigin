@@ -16,28 +16,31 @@ var coins = 10
 var hunger_timer = 0
 var hunger_health_loss_timer = 0
 
-func _process(delta):
-	hunger_timer += delta
-	if hunger_timer >= 1000:
-		hunger_timer = 0
-		if status == 0:
-			hunger += 1
-		elif status == 1:
-			hunger += 2
-	hunger = clamp(hunger, 0, 100)
+onready var game = get_parent()
 
-	if hunger == 100:
-		hunger_health_loss_timer += delta
-		if hunger_health_loss_timer >= 1000:
-			hunger_health_loss_timer = 0
+func _process(delta):
+	if game.get_name() == "Game" && game.is_playing():
+		hunger_timer += delta
+		if hunger_timer >= 1:
+			hunger_timer = 0
 			if status == 0:
-				health -= 2
+				hunger += 0.1
 			elif status == 1:
-				health -= 4
-	if health < 0:
-		health = 0
-		status = 2
-		emit_signal("_force_out_dungeon")
+				hunger += 0.2
+		hunger = clamp(hunger, 0, 100)
+
+		if hunger == 100:
+			hunger_health_loss_timer += delta
+			if hunger_health_loss_timer >= 1:
+				hunger_health_loss_timer = 0
+				if status == 0:
+					health -= 2
+				elif status == 1:
+					health -= 4
+		if health < 0:
+			health = 0
+			status = 2
+			emit_signal("_force_out_dungeon")
 
 func eat_food(type):
 	match type:

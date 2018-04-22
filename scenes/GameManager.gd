@@ -20,6 +20,8 @@ var food_costs = [10, 50, 50, 50]
 var can_buy = true
 var inv_open = false
 
+var playing = false
+	
 func _input(event):
 	if event is InputEventAction:
 		if event.pressed and event.action == "ui_cancel":
@@ -74,6 +76,7 @@ func _exit_dungeon():
 func _menu_play():
 	remove_child(get_node("MainMenu"))
 	add_child(load(care_scene).instance())
+	playing = true
 
 func _menu_settings():
 	pass
@@ -88,3 +91,6 @@ func _on_force_out_dungeon():
 
 func _feed(type):
 	stats.eat_food(type)
+
+func is_playing():
+	return playing

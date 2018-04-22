@@ -1,25 +1,79 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/care/CareManager.gd" type="Script" id=1]
-[ext_resource path="res://assets/care/pool.png" type="Texture" id=2]
-[ext_resource path="res://characters/player/CarePlayer.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/care/wheel.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui/health.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/hunger.png" type="Texture" id=3]
+[ext_resource path="res://assets/care/pool.png" type="Texture" id=4]
+[ext_resource path="res://characters/player/CarePlayer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/care/wheel.png" type="Texture" id=6]
 
-[node name="CareFacility" type="Node" index="0"]
+[node name="CareFacility" type="Node"]
 
 script = ExtResource( 1 )
 
-[node name="Bars" type="VBoxContainer" parent="." index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 10.0
+margin_left = 7.0
 margin_top = 10.0
-margin_right = 188.0
-margin_bottom = 66.0
+margin_right = 23.0
+margin_bottom = 46.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 16.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 20.0
+margin_right = 16.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="Bars" type="VBoxContainer" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 25.0
+margin_top = 10.0
+margin_right = 203.0
+margin_bottom = 46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -53,7 +107,7 @@ rounded = false
 percent_visible = true
 _sections_unfolded = [ "Percent" ]
 
-[node name="Happiness" type="ProgressBar" parent="Bars" index="1"]
+[node name="Hunger" type="ProgressBar" parent="Bars" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -77,31 +131,7 @@ exp_edit = false
 rounded = false
 percent_visible = true
 
-[node name="Hunger" type="ProgressBar" parent="Bars" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 40.0
-margin_right = 178.0
-margin_bottom = 56.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-percent_visible = true
-
-[node name="Footer" type="HBoxContainer" parent="." index="1"]
+[node name="Footer" type="HBoxContainer" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 1.0
@@ -167,7 +197,7 @@ text = "Enter Dungeon"
 flat = false
 align = 1
 
-[node name="Pool" type="TextureButton" parent="." index="2"]
+[node name="Pool" type="TextureButton" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -188,14 +218,14 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 2 )
+texture_normal = ExtResource( 4 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Player" parent="Pool" index="0" instance=ExtResource( 3 )]
+[node name="Player" parent="Pool" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( -86.4795, 38.7828 )
 
-[node name="TextureButton" type="TextureButton" parent="." index="3"]
+[node name="TextureButton" type="TextureButton" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -216,8 +246,28 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 4 )
+texture_normal = ExtResource( 6 )
 _sections_unfolded = [ "Textures" ]
+
+[node name="Coins" type="Label" parent="." index="5"]
+
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = -50.0
+margin_top = 8.0
+margin_right = -10.0
+margin_bottom = 22.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [connection signal="pressed" from="Footer/Feed" to="." method="_on_feed_pressed"]
 
