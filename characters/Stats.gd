@@ -22,7 +22,7 @@ func _process(delta):
 			hunger += 1
 		elif status == 1:
 			hunger += 2
-	hunger = clamp(0, 100)
+	hunger = clamp(hunger, 0, 100)
 
 	if hunger == 100:
 		hunger_health_loss_timer += delta
@@ -53,4 +53,4 @@ func eat_food(type):
 			strength += 1
 	
 	hunger = clamp(hunger, 0, 100)
-	health = clamp(clamp, 0, max_health)
+	health = clamp(health, 0, max_health)
