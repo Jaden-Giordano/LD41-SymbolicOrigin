@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/health.png-c8e310077151d1ced46604f8ee9121ae.stex"
+path="res://.import/care_center.svg-2b89f7ab65d4a587294f19d1867c14b2.stex"
 
 [deps]
 
-source_file="res://assets/ui/health.png"
-source_md5="71b61ae38ef38445e3fbfc17f2828553"
+source_file="res://assets/care_center.svg"
+source_md5="24da06f28efebe87c6adcf0d028eae9b"
 
-dest_files=[ "res://.import/health.png-c8e310077151d1ced46604f8ee9121ae.stex" ]
-dest_md5="fe53b7e4a87f20a813a035c253b7ecb3"
+dest_files=[ "res://.import/care_center.svg-2b89f7ab65d4a587294f19d1867c14b2.stex" ]
+dest_md5="7fec9f6e1c02a2fc84f659405eaf720e"
 
 [params]
 

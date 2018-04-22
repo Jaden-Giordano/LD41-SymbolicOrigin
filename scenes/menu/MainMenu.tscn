@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/ui/Title.png" type="Texture" id=2]
 [ext_resource path="res://assets/theme.tres" type="Theme" id=3]
 
-[node name="MainMenu" type="Node" index="0"]
+[node name="MainMenu" type="Node"]
 
 script = ExtResource( 1 )
 

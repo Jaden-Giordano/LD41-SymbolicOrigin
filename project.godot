@@ -10,8 +10,9 @@ config_version=3
 
 [application]
 
-config/name="New Game Project"
+config/name="LD41"
 run/main_scene="res://scenes/Game.tscn"
+config/use_custom_user_dir=true
 config/icon="res://icon.png"
 
 [display]
