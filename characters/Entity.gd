@@ -6,16 +6,23 @@ const right = Vector2(1,0)
 const up = Vector2(0,-1)
 const down = Vector2(0,1)
 var movedir = Vector2(0,0)
+var spritedir = "Down"
 
 onready var stats = get_node("Stats")
 
+
 func _physics_process(delta):
 	movement_loop()
+	spritedir_loop()
 
 func _process(delta):
+	if movedir != Vector2(0,0):
+		anim_switch("Walk")
+	else:
+		anim_switch("Idle")
 	if movedir.x == 1:
 		get_node("Position2D/Body").flip_h = true
-	else:
+	elif movedir.x == -1:
 		get_node("Position2D/Body").flip_h = false
 
 func rand():
@@ -37,6 +44,22 @@ func rand():
 			return left+down
 		8: 
 			return right+down
+
+func spritedir_loop():
+	match movedir:
+		Vector2(-1,0):
+			spritedir = "Left"
+		Vector2(1,0):
+			spritedir = "Right"
+		Vector2(0,-1):
+			spritedir = "Up"
+		Vector2(0,1):
+			spritedir = "Down"
+
+func anim_switch(animation):
+	var newanim = str(animation,spritedir)
+	if $Anim.current_animation != newanim:
+		$Anim.play(newanim)
 
 func movement_loop():
 	var motion = movedir.normalized() * ((0.5 * log(stats.speed / 8)) + 0.5) * 100
