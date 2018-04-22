@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/animated pets-1.png-b9f2873bc97c7939da7621ff7e80393f.stex"
+path="res://.import/Title.png-f84aa493ffda15ad1e219c981133021c.stex"
 
 [deps]
 
-source_file="res://art/animated pets-1.png"
-source_md5="df065488169cd18ffe1cb8750eec023f"
+source_file="res://assets/UI/Title.png"
+source_md5="2c0cd9fe884c2adff988e69b21ad3f75"
 
-dest_files=[ "res://.import/animated pets-1.png-b9f2873bc97c7939da7621ff7e80393f.stex" ]
-dest_md5="b55a0039ecd3f20794c5bf21317dc060"
+dest_files=[ "res://.import/Title.png-f84aa493ffda15ad1e219c981133021c.stex" ]
+dest_md5="ce1b89e2892d7d545c9c7d7bacbd07a8"
 
 [params]
 

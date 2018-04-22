@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset.png-9a7aa93aa20d6fc1a677061e224b6b5b.stex"
+path="res://.import/HoveredBox.png-588bf5498cdb08aa6a41e35f4188701a.stex"
 
 [deps]
 
-source_file="res://art/tileset.png"
-source_md5="4b7aeb93848a4792c71aba49ce1da54f"
+source_file="res://assets/UI/HoveredBox.png"
+source_md5="e925a9dcbd5c463cd7805c917ae94473"
 
-dest_files=[ "res://.import/tileset.png-9a7aa93aa20d6fc1a677061e224b6b5b.stex" ]
-dest_md5="60f9af24ebc62aa201f194ada27e8cc9"
+dest_files=[ "res://.import/HoveredBox.png-588bf5498cdb08aa6a41e35f4188701a.stex" ]
+dest_md5="8a07e680aa0be064b4c526cbc6372a39"
 
 [params]
 

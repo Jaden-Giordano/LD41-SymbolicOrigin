@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hazards.png-36f67effdfd4751fe691dae3435bfc8b.stex"
+path="res://.import/Player.png-6803eab55bef976c27bd94984cab14de.stex"
 
 [deps]
 
-source_file="res://art/hazards.png"
-source_md5="9bbefa9a3d2b1a3b9ffdf218bcd9c286"
+source_file="res://assets/Player.png"
+source_md5="6b42aedd4e843192ac7e78fde3979d79"
 
-dest_files=[ "res://.import/hazards.png-36f67effdfd4751fe691dae3435bfc8b.stex" ]
-dest_md5="ebb1030b47776476572a92b7e0f0df5a"
+dest_files=[ "res://.import/Player.png-6803eab55bef976c27bd94984cab14de.stex" ]
+dest_md5="f43d90c2c5f9d1fb39aa5395a8fa32c6"
 
 [params]
 

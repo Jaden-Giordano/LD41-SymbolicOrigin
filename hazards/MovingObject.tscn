@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://hazards/MovingObject.gd" type="Script" id=1]
-[ext_resource path="res://art/hazards.png" type="Texture" id=2]
+[ext_resource path="res://assets/hazards.png" type="Texture" id=2]
+
 
 [node name="MovingObject" type="PathFollow2D" index="0"]
 
