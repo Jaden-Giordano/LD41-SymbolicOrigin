@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://characters/Stats.gd" type="Script" id=2]
+[ext_resource path="res://characters/Inventory.gd" type="Script" id=3]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 menu_scene = "res://scenes/menu/MainMenu.tscn"
@@ -14,5 +15,9 @@ food_inventory_scene = "res://scenes/care/inventory/FoodInventory.tscn"
 [node name="Stats" type="Node" parent="." index="0"]
 
 script = ExtResource( 2 )
+
+[node name="Inventory" type="Node" parent="." index="1"]
+
+script = ExtResource( 3 )
 
 

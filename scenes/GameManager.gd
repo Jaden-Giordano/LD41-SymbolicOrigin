@@ -6,9 +6,9 @@ export(String) var dungeon_scene
 
 export(String) var food_inventory_scene
 var food_inv_scene_loaded
-onready var foods = [0, 1, 1, 0, 2, 3, 1]
 
 onready var stats = get_node("Stats")
+onready var inventory = get_node("Inventory")
 
 func _ready():
 	food_inv_scene_loaded = load(food_inventory_scene)
@@ -25,9 +25,9 @@ func _open_food_inventory():
 	for i in range(9):
 		food_inv.get_node("Slots/" + String(i)).disabled = true
 
-	for i in range(foods.size()):
+	for i in range(inventory.foods.size()):
 		var item = food_inv.get_node("Slots/" + String(i))
-		item.set_text(String(foods[i]))
+		item.set_text(String(inventory.foods[i]))
 		item.disabled = false
 	add_child(food_inv)
 
