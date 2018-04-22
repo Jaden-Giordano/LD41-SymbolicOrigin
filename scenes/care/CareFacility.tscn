@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/care/CareManager.gd" type="Script" id=1]
+[ext_resource path="res://assets/care/pool.png" type="Texture" id=2]
+[ext_resource path="res://characters/player/CarePlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/care/wheel.png" type="Texture" id=4]
 
-[node name="CareFacility" type="Node" index="0"]
+[node name="CareFacility" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -15,6 +18,7 @@ autostart = false
 
 [node name="Bars" type="VBoxContainer" parent="." index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -194,7 +198,61 @@ text = "Enter Dungeon"
 flat = false
 align = 1
 
+[node name="Pool" type="TextureButton" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 278.0
+margin_top = 163.0
+margin_right = 342.0
+margin_bottom = 203.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 2 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="Player" parent="Pool" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( -86.4795, 38.7828 )
+
+[node name="TextureButton" type="TextureButton" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 81.0
+margin_top = 161.0
+margin_right = 121.0
+margin_bottom = 201.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 4 )
+_sections_unfolded = [ "Textures" ]
+
 [connection signal="timeout" from="CuddleTimer" to="." method="_on_cuddle_timeout"]
+
+[connection signal="pressed" from="Footer/Feed" to="." method="_on_feed_pressed"]
 
 [connection signal="pressed" from="Footer/Cuddle" to="." method="_on_cuddle_pressed"]
 

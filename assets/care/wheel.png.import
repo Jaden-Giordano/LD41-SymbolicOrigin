@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HoveredBox.png-9f378e4a8e51d9b6d6d2c542c89bad7e.stex"
+path="res://.import/wheel.png-00d911afb11d1cabbc66e0ffe996a080.stex"
 
 [deps]
 
-source_file="res://assets/ui/HoveredBox.png"
-source_md5="e925a9dcbd5c463cd7805c917ae94473"
+source_file="res://assets/care/wheel.png"
+source_md5="84b687b0c4d2098286685d4d98410701"
 
-dest_files=[ "res://.import/HoveredBox.png-9f378e4a8e51d9b6d6d2c542c89bad7e.stex" ]
-dest_md5="8a07e680aa0be064b4c526cbc6372a39"
+dest_files=[ "res://.import/wheel.png-00d911afb11d1cabbc66e0ffe996a080.stex" ]
+dest_md5="2557c6029157c63a75ca624df47eb743"
 
 [params]
 
