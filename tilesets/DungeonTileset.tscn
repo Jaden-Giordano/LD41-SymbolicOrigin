@@ -7,13 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8, 8 )
 
-[sub_resource type="OccluderPolygon2D" id=6]
-
-closed = true
-cull_mode = 0
-polygon = PoolVector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
-
-[sub_resource type="OccluderPolygon2D" id=5]
+[sub_resource type="OccluderPolygon2D" id=2]
 
 closed = true
 cull_mode = 0
@@ -25,7 +19,13 @@ closed = true
 cull_mode = 0
 polygon = PoolVector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
 
-[node name="Dungeon" type="Node" index="0"]
+[sub_resource type="OccluderPolygon2D" id=4]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
+
+[node name="Dungeon" type="Node"]
 
 [node name="FrontWall1" type="Sprite" parent="." index="0"]
 
@@ -212,7 +212,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="WallTopSide" index="1"]
 
-occluder = SubResource( 6 )
+occluder = SubResource( 2 )
 light_mask = 1
 _sections_unfolded = [ "Transform" ]
 
@@ -226,7 +226,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="LightOccluder2D6" type="LightOccluder2D" parent="WallTop" index="0"]
 
-occluder = SubResource( 5 )
+occluder = SubResource( 3 )
 light_mask = 1
 _sections_unfolded = [ "Transform" ]
 
@@ -256,7 +256,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="LightOccluder2D6" type="LightOccluder2D" parent="WallTopCorner" index="1"]
 
-occluder = SubResource( 3 )
+occluder = SubResource( 4 )
 light_mask = 1
 _sections_unfolded = [ "Transform" ]
 
