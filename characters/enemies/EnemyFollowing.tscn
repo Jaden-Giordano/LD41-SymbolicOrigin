@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/enemies/EnemyFollowing.gd" type="Script" id=2]
 [ext_resource path="res://assets/pets/pet4.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.19225, 6.16889 )
 
 [node name="EnemyFollowing" groups=[
 "enemies",
@@ -25,6 +30,15 @@ process_mode = 1
 wait_time = 0.4
 one_shot = false
 autostart = true
+
+[node name="Stats" parent="." index="3"]
+
+player_invicibility_time = 0.5
+
+[node name="CollisionShape2D" parent="AttackRadius" index="0"]
+
+position = Vector2( 1.90735e-06, 1.99083 )
+shape = SubResource( 1 )
 
 [connection signal="timeout" from="MoveTimer" to="." method="_on_MoveTimer_timeout"]
 

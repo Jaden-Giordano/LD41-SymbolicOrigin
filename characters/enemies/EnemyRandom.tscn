@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/enemies/EnemyRandom.gd" type="Script" id=2]
 [ext_resource path="res://assets/pets/pet2.png" type="Texture" id=3]
 
-[node name="EnemyRandom" groups=[
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.39142, 6.38392 )
+
+[node name="EnemyRandom" index="0" groups=[
 "enemies",
 ] instance=ExtResource( 1 )]
 
@@ -23,6 +28,15 @@ process_mode = 1
 wait_time = 2.0
 one_shot = false
 autostart = true
+
+[node name="Stats" parent="." index="3"]
+
+player_invicibility_time = 0.5
+
+[node name="CollisionShape2D" parent="AttackRadius" index="0"]
+
+position = Vector2( -0.0198479, 1.96101 )
+shape = SubResource( 1 )
 
 [connection signal="timeout" from="MoveTimer" to="." method="_on_MoveTimer_timeout"]
 

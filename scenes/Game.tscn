@@ -9,7 +9,7 @@
 [ext_resource path="res://characters/Inventory.gd" type="Script" id=7]
 [ext_resource path="res://characters/StatsView.tscn" type="PackedScene" id=8]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 menu_scene = "res://scenes/menu/MainMenu.tscn"
@@ -30,7 +30,7 @@ speed = 1
 strength = 1
 coins = 10
 attack_push = 5000
-player_invicibility_time = 1.5
+player_invicibility_time = 0.5
 
 [node name="Inventory" type="Node" parent="." index="1"]
 

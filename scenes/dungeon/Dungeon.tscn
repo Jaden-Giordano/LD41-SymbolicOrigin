@@ -15,7 +15,6 @@ paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_1.tscn" )
 position = Vector2( 1, 1 )
 z_index = 1
 _sections_unfolded = [ "Transform", "Z Index" ]
-attack_cooldown = 1.5
 
 [node name="Camera2D" type="Camera2D" parent="." index="1"]
 

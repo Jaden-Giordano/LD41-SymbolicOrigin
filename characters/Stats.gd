@@ -14,7 +14,7 @@ var status = 0 # 0 = Inactive, 1 = Active, 2 = Dead
 export(int) var coins = 10
 
 export(float) var attack_push = 5000
-export(float) var player_invicibility_time = 1.5
+export(float) var player_invicibility_time = 0.5
 
 var hunger_timer = 0
 var hunger_health_loss_timer = 0
