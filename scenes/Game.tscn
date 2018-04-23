@@ -29,6 +29,7 @@ max_health = 20
 speed = 1
 strength = 1
 coins = 10
+attack_push = 5000
 player_invicibility_time = 1.5
 
 [node name="Inventory" type="Node" parent="." index="1"]
