@@ -1,6 +1,6 @@
 extends "res://characters/Entity.gd"
 
-export(int) var attack_cooldown = 3
+export(int) var attack_cooldown = 1.5
 
 var has_attacked = false
 var attack_counter = 0
@@ -24,14 +24,20 @@ func _process(delta):
 
 func _physics_process(delta):
 	movedir = Vector2(0, 0)
+	
+	var attack_area = get_node("AttackRadius")
 
 	if Input.is_action_pressed("move_left"):
 		movedir.x -= 1
 		get_node("Position2D/Body").flip_h = false
+		attack_area.rotation_degrees = 90
 	if Input.is_action_pressed("move_right"):
 		movedir.x += 1
 		get_node("Position2D/Body").flip_h = true
+		attack_area.rotation_degrees = 270
 	if Input.is_action_pressed("move_up"):
 		movedir.y -= 1
+		attack_area.rotation_degrees = 180
 	if Input.is_action_pressed("move_down"):
 		movedir.y += 1
+		attack_area.rotation_degrees = 0

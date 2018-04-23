@@ -38,8 +38,7 @@ func _enter_dungeon():
 	add_child(load(dungeon_scene).instance())
 	var stats_view = get_node("StatsView")
 	remove_child(stats_view)
-	get_node("Dungeon/Camera2D").add_child(stats_view)
-	stats_view.position = Vector2(-200, -150)
+	get_node("Dungeon/UI").add_child(stats_view)
 
 func _open_food_inventory():
 	if !inv_open:
@@ -88,10 +87,9 @@ func _on_strength_train():
 
 # Dungeon
 func _exit_dungeon():
-	var stats_view = get_node("Dungeon/Camera2D/StatsView")
-	get_node("Dungeon/Camera2D").remove_child(stats_view)
+	var stats_view = get_node("Dungeon/UI/StatsView")
+	get_node("Dungeon/UI").remove_child(stats_view)
 	add_child(stats_view)
-	stats_view.position = Vector2(0, 0)
 	stats.set_stats(get_node("Dungeon/Player/Stats"))
 	remove_child(get_node("Dungeon"))
 	add_child(load(care_scene).instance())
