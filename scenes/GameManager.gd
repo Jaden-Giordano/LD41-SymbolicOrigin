@@ -40,6 +40,8 @@ func _enter_dungeon():
 	remove_child(stats_view)
 	get_node("Dungeon/UI").add_child(stats_view)
 	stats.status = 0
+	get_node("DungeonMusic").play()
+	get_node("PetCareMusic").stop()
 
 func _open_food_inventory():
 	if !inv_open:
@@ -95,6 +97,8 @@ func _exit_dungeon():
 	add_child(stats_view)
 	remove_child(get_node("Dungeon"))
 	add_child(load(care_scene).instance())
+	get_node("DungeonMusic").stop()
+	get_node("PetCareMusic").play()
 	stats.reset()
 
 # Menu
@@ -102,6 +106,8 @@ func _menu_play():
 	remove_child(get_node("MainMenu"))
 	add_child(load(care_scene).instance())
 	get_node("StatsView").show()
+	get_node("DungeonMusic").stop()
+	get_node("PetCareMusic").play()
 	playing = true
 
 func _menu_settings():
