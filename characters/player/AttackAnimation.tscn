@@ -46,7 +46,9 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
-[node name="attack" type="AnimationPlayer" index="0"]
+[node name="AttackAnimation" type="Node2D" index="0"]
+
+[node name="attack" type="AnimationPlayer" parent="." index="0"]
 
 root_node = NodePath("..")
 autoplay = "Default"
@@ -56,15 +58,15 @@ playback_speed = 1.0
 anims/Default = SubResource( 1 )
 blend_times = [  ]
 script = ExtResource( 1 )
-remove = true
+remove = false
 
-[node name="hit" type="Sprite" parent="." index="0"]
+[node name="hit" type="Sprite" parent="attack" index="0"]
 
 visible = false
 texture = ExtResource( 2 )
 vframes = 3
 hframes = 2
-frame = 5
+frame = 4
 _sections_unfolded = [ "Animation", "Transform", "Visibility" ]
 
 

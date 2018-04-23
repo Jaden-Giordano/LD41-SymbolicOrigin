@@ -1,8 +1,7 @@
-extends AnimationPlayer
+extends Node2D
 
 export var remove = false
 
 func _process(delta):
 	if remove:
-		self.remove
-		print("nothing")
+		get_parent().remove_child(self)
