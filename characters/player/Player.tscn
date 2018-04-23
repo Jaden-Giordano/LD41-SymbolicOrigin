@@ -4,10 +4,10 @@
 [ext_resource path="res://characters/player/Player.gd" type="Script" id=2]
 [ext_resource path="res://assets/light.png" type="Texture" id=3]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-points = PoolVector2Array( 0, -10, 20, 10, 0, 20, -20, 10 )
+radius = 6.0
 
 [node name="Player" instance=ExtResource( 1 )]
 
@@ -22,6 +22,11 @@ _sections_unfolded = [ "Transform" ]
 [node name="Body" parent="Position2D" index="0"]
 
 flip_h = true
+
+[node name="Stats" parent="." index="2"]
+
+attack_push = 7000.0
+player_invicibility_time = 0.5
 
 [node name="Light2D" type="Light2D" parent="." index="3"]
 
@@ -54,7 +59,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" parent="AttackRadius" index="0"]
 
-position = Vector2( 0, 10 )
+position = Vector2( 0.642555, 13.4698 )
 shape = SubResource( 1 )
 
 [node name="AttackPoint" type="Node2D" parent="AttackRadius" index="1"]

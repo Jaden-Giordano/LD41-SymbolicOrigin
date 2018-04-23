@@ -11,6 +11,7 @@ var spritedir = "Down"
 var damaged = false
 var push_direction = Vector2(0, 0)
 var push_counter = 0
+var push_time = 0.2
 
 var invincible = false
 var invinc_counter = 0
@@ -30,7 +31,7 @@ func _physics_process(delta):
 func _process(delta):
 	if damaged:
 		push_counter += delta
-		if push_counter >= 0.5:
+		if push_counter >= push_time:
 			damaged = false
 			push_direction = Vector2(0, 0)
 			push_counter = 0
