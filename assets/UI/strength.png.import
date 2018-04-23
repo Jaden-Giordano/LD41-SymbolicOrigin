@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/strength.png-2175e1c07fac83d9d01e68347526b88c.stex"
+path="res://.import/strength.png-0ac6c57a4211422d2226c0105d5590d2.stex"
 
 [deps]
 
-source_file="res://assets/ui/strength.png"
+source_file="res://assets/UI/strength.png"
 source_md5="38ccb26c086129d0be6402170a76efb6"
 
-dest_files=[ "res://.import/strength.png-2175e1c07fac83d9d01e68347526b88c.stex" ]
+dest_files=[ "res://.import/strength.png-0ac6c57a4211422d2226c0105d5590d2.stex" ]
 dest_md5="75563ebd74001b77aeeaef6d45f2ca94"
 
 [params]

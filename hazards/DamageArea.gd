@@ -12,11 +12,12 @@ func _process(delta):
             tick_timer = 0
             current_body.damage(damage_per_second, null, null)
 
-func _on_enter(body):
-    if body.get_name() == "Player":
+func _on_DamageArea_body_entered(body):
+	 if body.get_name() == "Player":
         current_body = body
 
-func _on_exit(body):
-    if body.get_name() == "Player":
+
+func _on_DamageArea_body_exited(body):
+	if body.get_name() == "Player":
         current_body = null
         tick_timer = 1
