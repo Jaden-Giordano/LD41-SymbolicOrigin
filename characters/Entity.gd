@@ -116,7 +116,6 @@ func damage(amt, dir, from):
 		stats.health -= amt
 		if stats.health <= 0:
 			stats.health = 0
-			stats.status = 2
 			from.reward(stats.coins)
 		
 		push_direction = dir

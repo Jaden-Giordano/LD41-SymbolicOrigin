@@ -90,6 +90,7 @@ func _on_strength_train():
 # Dungeon
 func _exit_dungeon():
 	var stats_view = get_node("Dungeon/UI/StatsView")
+	print(stats_view)
 	get_node("Dungeon/UI").remove_child(stats_view)
 	add_child(stats_view)
 	remove_child(get_node("Dungeon"))
