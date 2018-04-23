@@ -7,20 +7,21 @@
 [ext_resource path="res://assets/foods/vitamin.png" type="Texture" id=5]
 [ext_resource path="res://assets/foods/protein.png" type="Texture" id=6]
 
-[node name="FoodInventory" type="Node"]
+[node name="FoodInventory" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
 [node name="Slots" type="GridContainer" parent="." index="0"]
 
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -118.0
-margin_top = -20.0
+margin_top = -66.0
 margin_right = 118.0
-margin_bottom = 4.0
+margin_bottom = -42.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -153,6 +154,95 @@ text = "$50"
 icon = ExtResource( 6 )
 flat = false
 align = 1
+
+[node name="GridContainer" type="GridContainer" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 158.0
+margin_top = 105.0
+margin_right = 326.0
+margin_bottom = 153.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/vseparation = 0
+custom_constants/hseparation = 8
+columns = 4
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Label" type="Label" parent="GridContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 44.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 2 )
+text = "+5 HP
+-1 SPD"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="Label2" type="Label" parent="GridContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 52.0
+margin_top = 8.0
+margin_right = 102.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 2 )
+text = "+3 SPD"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="Label3" type="Label" parent="GridContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 110.0
+margin_right = 160.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 2 )
+text = "+2 STR
+-1 SPD"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
 
 [connection signal="pressed" from="Slots/Close" to="." method="_on_close_feed_menu"]
 

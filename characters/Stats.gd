@@ -63,7 +63,7 @@ func eat_food(type):
 			if speed <= 0: speed = 1
 		2: # Vitamins (Speed)
 			hunger -= 100
-			speed += 2
+			speed += 3
 		3: # Protien (Strength)
 			hunger -= 100
 			speed -= 1

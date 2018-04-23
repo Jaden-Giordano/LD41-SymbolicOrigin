@@ -11,7 +11,7 @@
 [ext_resource path="res://assets/sound/LD41DUNGEONDEMO.ogg" type="AudioStream" id=9]
 [ext_resource path="res://assets/sound/LD41PETCARE.ogg" type="AudioStream" id=10]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 menu_scene = "res://scenes/menu/MainMenu.tscn"

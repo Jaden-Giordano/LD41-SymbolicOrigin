@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/dungeon/DungeonManager.gd" type="Script" id=1]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/theme.tres" type="Theme" id=3]
 
 [node name="Dungeon" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_2.tscn" )
+paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_2.tscn", "res://rooms/Room_1.tscn", "res://rooms/Room_4.tscn" )
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 1, 1 )
 z_index = 1
 _sections_unfolded = [ "Transform", "Z Index" ]
+invincible = false
 
 [node name="Camera2D" type="Camera2D" parent="." index="1"]
 
@@ -55,34 +55,5 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-
-[node name="ExitDungeon" type="Button" parent="UI" index="0"]
-
-anchor_left = 0.0
-anchor_top = 1.0
-anchor_right = 0.0
-anchor_bottom = 1.0
-margin_left = 5.0
-margin_top = -27.0
-margin_right = 97.0
-margin_bottom = -5.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-theme = ExtResource( 3 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Exit Dungeon"
-flat = false
-align = 1
-_sections_unfolded = [ "Theme" ]
-
-[connection signal="pressed" from="UI/ExitDungeon" to="." method="_on_exit_dungeon_pressed"]
 
 
