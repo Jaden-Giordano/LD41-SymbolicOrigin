@@ -6,7 +6,7 @@
 [ext_resource path="res://characters/player/CarePlayer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/care/wheel.png" type="Texture" id=5]
 
-[node name="CareFacility" type="Node"]
+[node name="CareFacility" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -185,21 +185,21 @@ _sections_unfolded = [ "Theme" ]
 
 process_mode = 1
 wait_time = 5.0
-one_shot = false
+one_shot = true
 autostart = false
 
 [node name="StrengthTrainTimer" type="Timer" parent="." index="7"]
 
 process_mode = 1
 wait_time = 5.0
-one_shot = false
+one_shot = true
 autostart = false
 
 [connection signal="pressed" from="Footer/Feed" to="." method="_on_feed_pressed"]
 
 [connection signal="pressed" from="Footer/EnterDungeon" to="." method="_on_enter_dungeon_pressed"]
 
-[connection signal="pressed" from="Pool" to="." method="_on_speed_training_pressed"]
+[connection signal="pressed" from="Pool" to="." method="_on_strength_training_pressed"]
 
 [connection signal="pressed" from="Wheel" to="." method="_on_speed_training_pressed"]
 

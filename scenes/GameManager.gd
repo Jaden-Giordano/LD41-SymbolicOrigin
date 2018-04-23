@@ -71,6 +71,7 @@ func _buy_food(type):
 		_open_food_inventory()
 
 func _on_training_ended(type):
+	print(type)
 	stats.status = 0
 	if type == 0:
 		stats.speed += 1
