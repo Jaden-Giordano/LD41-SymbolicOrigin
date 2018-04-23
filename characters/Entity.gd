@@ -113,7 +113,7 @@ func damage(amt, dir, from):
 			get_node("/root/Game/death").play()
 			stats.health = 0
 			if from != null:
-				from.reward(stats.coins)
+				get_node("/root/Game/DropFactory").create_drop(self.position)
 		
 		if dir != null:
 			push_direction = dir

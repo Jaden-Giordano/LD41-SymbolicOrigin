@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://assets/foods/simple.png" type="Texture" id=2]
@@ -13,8 +13,9 @@
 [ext_resource path="res://assets/sound/LD41ENEMYHURT.ogg" type="AudioStream" id=11]
 [ext_resource path="res://assets/sound/LD41BUTTONSCROLL.ogg" type="AudioStream" id=12]
 [ext_resource path="res://assets/sound/LD41BUTTONSELECT.ogg" type="AudioStream" id=13]
+[ext_resource path="res://scenes/DropFactory.gd" type="Script" id=14]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 menu_scene = "res://scenes/menu/MainMenu.tscn"
@@ -91,6 +92,11 @@ volume_db = 0.0
 autoplay = false
 mix_target = 0
 bus = "SFX"
+
+[node name="DropFactory" type="Node" parent="." index="9"]
+
+script = ExtResource( 14 )
+pickups = PoolStringArray( "res://hazards/pickups/HealthPickup.tscn", "res://hazards/pickups/CoinsPickup.tscn" )
 
 [connection signal="_force_out_dungeon" from="Stats" to="." method="_exit_dungeon"]
 
