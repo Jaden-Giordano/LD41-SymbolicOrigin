@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/speed.png-d505ed6f45940abe1bfc3685df8f7b32.stex"
+path="res://.import/pet5.png-9d4fc70a0699070348758a3aaffe3056.stex"
 
 [deps]
 
-source_file="res://assets/UI/speed.png"
-source_md5="dea1d4fbe0c765a28d7fe53570cee822"
+source_file="res://assets/pets/pet5.png"
+source_md5="1071982b98b12f752c6acf61393c8593"
 
-dest_files=[ "res://.import/speed.png-d505ed6f45940abe1bfc3685df8f7b32.stex" ]
-dest_md5="976d08b8f152371fa72fed38aceed899"
+dest_files=[ "res://.import/pet5.png-9d4fc70a0699070348758a3aaffe3056.stex" ]
+dest_md5="628651e26fd275e3fc9fd3347445a5d2"
 
 [params]
 
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

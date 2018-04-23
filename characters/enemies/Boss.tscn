@@ -1,0 +1,245 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/enemies/Boss.gd" type="Script" id=2]
+[ext_resource path="res://assets/pets/pet5.png" type="Texture" id=3]
+[ext_resource path="res://characters/EffectseEnemy.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CapsuleShape2D" id=12]
+
+custom_solver_bias = 0.0
+radius = 13.5878
+height = 27.5934
+
+[sub_resource type="Animation" id=13]
+
+resource_name = "IdleDown"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Position2D/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=14]
+
+resource_name = "IdleLeft"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Position2D/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=15]
+
+resource_name = "IdleRight"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Position2D/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=16]
+
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Position2D/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=17]
+
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Position2D/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=18]
+
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Position2D/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=19]
+
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Position2D/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=20]
+
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Position2D/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=21]
+
+custom_solver_bias = 0.0
+radius = 15.367
+height = 27.182
+
+[sub_resource type="CircleShape2D" id=22]
+
+custom_solver_bias = 0.0
+radius = 21.5469
+
+[sub_resource type="CircleShape2D" id=23]
+
+custom_solver_bias = 0.0
+radius = 20.5612
+
+[node name="Boss" index="0" groups=[
+"enemies",
+"goal",
+] instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+sprite = 5
+invincible = false
+
+[node name="Body" parent="Position2D" index="0"]
+
+texture = ExtResource( 3 )
+vframes = 3
+hframes = 1
+frame = 0
+
+[node name="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 12 )
+
+[node name="Stats" parent="." index="2"]
+
+max_health = 200
+color = Color( 0.824219, 1, 0.855804, 1 )
+coins = 100
+
+[node name="Anim" parent="." index="3"]
+
+anims/IdleDown = SubResource( 13 )
+anims/IdleLeft = SubResource( 14 )
+anims/IdleRight = SubResource( 15 )
+anims/IdleUp = SubResource( 16 )
+anims/WalkDown = SubResource( 17 )
+anims/WalkLeft = SubResource( 18 )
+anims/WalkRight = SubResource( 19 )
+anims/WalkUp = SubResource( 20 )
+
+[node name="AttackRadius" parent="." index="4"]
+
+position = Vector2( 0.643921, 0 )
+
+[node name="CollisionShape2D" parent="AttackRadius" index="0"]
+
+position = Vector2( -0.5, 2 )
+shape = SubResource( 21 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AttackRadius" index="1"]
+
+position = Vector2( 0.711983, -3.55991 )
+shape = SubResource( 22 )
+
+[node name="MoveTimer" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 0.2
+one_shot = false
+autostart = true
+
+[node name="Effects" parent="." index="7" instance=ExtResource( 4 )]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="8"]
+
+position = Vector2( 1.13917, -3.55991 )
+shape = SubResource( 23 )
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_MoveTimer_timeout"]
+
+
