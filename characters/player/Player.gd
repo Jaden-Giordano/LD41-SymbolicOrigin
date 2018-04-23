@@ -19,6 +19,7 @@ func _process(delta):
 			has_attacked = false
 	
 	if Input.is_action_just_pressed("attack") and !has_attacked:
+		attack_anim()
 		has_attacked = true
 		attack_counter = 0
 		var enemies = []
@@ -26,12 +27,13 @@ func _process(delta):
 			if body.get_groups().has("enemies"):
 				enemies.append(body)
 		attack(enemies)
-		
-		var attack_point = get_node("AttackRadius/AttackPoint")
-		var attack_anim = attack_scene_loaded.instance()
-		get_parent().add_child(attack_anim)
-		get_node("../AttackAnimation").global_position = attack_point.global_position
-		get_node("../AttackAnimation/Anim").set_current_animation("Default")
+
+func attack_anim():
+	var attack_point = get_node("AttackRadius/AttackPoint")
+	var attack_anim = attack_scene_loaded.instance()
+	get_parent().add_child(attack_anim)
+	get_node("../AttackAnimation").global_position = attack_point.global_position
+	get_node("../AttackAnimation/Anim").set_current_animation("Default")
 
 func _physics_process(delta):
 	movedir = Vector2(0, 0)
