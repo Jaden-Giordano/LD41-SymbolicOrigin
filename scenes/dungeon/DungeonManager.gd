@@ -29,6 +29,8 @@ func load_room(position, scene):
 
 
 func _ready():
+	connect("_exit_dungeon", get_parent(), "_exit_dungeon")
+
 	# Create an empty grid for the rooms.
 	for i in range(DUNGEON_SIZE + 1): # 101 (-50 to 50)
 		rooms_grid.append([])
