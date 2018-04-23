@@ -17,7 +17,8 @@ func _process(delta):
 		attack_counter += delta
 		if attack_counter >= attack_cooldown:
 			has_attacked = false
-	elif Input.is_action_just_pressed("attack"):
+	
+	if Input.is_action_just_pressed("attack") and !has_attacked:
 		has_attacked = true
 		attack_counter = 0
 		var enemies = []
