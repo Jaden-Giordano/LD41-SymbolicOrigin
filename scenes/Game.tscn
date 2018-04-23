@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://assets/foods/simple.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/foods/protein.png" type="Texture" id=5]
 [ext_resource path="res://characters/Stats.gd" type="Script" id=6]
 [ext_resource path="res://characters/Inventory.gd" type="Script" id=7]
+[ext_resource path="res://characters/StatsView.tscn" type="PackedScene" id=8]
 
 [node name="Game" type="Node"]
 
@@ -23,12 +24,19 @@ protein_food = ExtResource( 5 )
 [node name="Stats" type="Node" parent="." index="0"]
 
 script = ExtResource( 6 )
+hunger = 0
+max_health = 20
+speed = 1
+strength = 1
+coins = 10
 
 [node name="Inventory" type="Node" parent="." index="1"]
 
 script = ExtResource( 7 )
 
-[node name="FoodTimer" type="Timer" parent="." index="2"]
+[node name="StatsView" parent="." index="2" instance=ExtResource( 8 )]
+
+[node name="FoodTimer" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 30.0

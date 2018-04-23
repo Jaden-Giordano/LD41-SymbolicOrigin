@@ -30,11 +30,16 @@ func _input(event):
 func _ready():
 	food_inv_scene_loaded = load(food_inventory_scene)
 	add_child(load(menu_scene).instance())
+	get_node("StatsView").hide()
 
 # Care
 func _enter_dungeon():
 	remove_child(get_node("CareFacility"))
 	add_child(load(dungeon_scene).instance())
+	var stats_view = get_node("StatsView")
+	remove_child(stats_view)
+	get_node("Dungeon/Camera2D").add_child(stats_view)
+	stats_view.position = Vector2(-200, -150)
 
 func _open_food_inventory():
 	if !inv_open:
@@ -68,9 +73,10 @@ func _buy_food(type):
 
 func _on_training_ended(type):
 	stats.status = 0
-	match type:
-		0: stats.speed += 1
-		1: stats.strength += 1
+	if type == 0:
+		stats.speed += 1
+	elif type == 1:
+		stats.strength += 1
 
 func _on_speed_train():
 	if stats.status == 0:
@@ -82,6 +88,11 @@ func _on_strength_train():
 
 # Dungeon
 func _exit_dungeon():
+	var stats_view = get_node("Dungeon/Camera2D/StatsView")
+	get_node("Dungeon/Camera2D").remove_child(stats_view)
+	add_child(stats_view)
+	stats_view.position = Vector2(0, 0)
+	stats.set_stats(get_node("Dungeon/Player/Stats"))
 	remove_child(get_node("Dungeon"))
 	add_child(load(care_scene).instance())
 
@@ -89,6 +100,7 @@ func _exit_dungeon():
 func _menu_play():
 	remove_child(get_node("MainMenu"))
 	add_child(load(care_scene).instance())
+	get_node("StatsView").show()
 	playing = true
 
 func _menu_settings():

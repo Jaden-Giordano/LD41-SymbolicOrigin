@@ -8,11 +8,21 @@ const down = Vector2(0,1)
 var movedir = Vector2(0,0)
 var spritedir = "Down"
 
+var damaged = false
+var push_direction = Vector2(0, 0)
+var push_counter = 0
+
 onready var stats = get_node("Stats")
 
-
 func _physics_process(delta):
-	movement_loop()
+	if damaged:
+		push_counter += delta
+		if push_counter >= 0.4:
+			damaged = false
+			push_direction = Vector2(0, 0)
+			push_counter = 0
+
+	movement_loop(delta)
 	spritedir_loop()
 
 func _process(delta):
@@ -61,6 +71,24 @@ func anim_switch(animation):
 	if $Anim.current_animation != newanim:
 		$Anim.play(newanim)
 
-func movement_loop():
-	var motion = movedir.normalized() * ((0.5 * log(0.125 * stats.speed)) + 0.5) * -100
+func movement_loop(delta):
+	var motion = movedir.normalized() * ((0.5 * log((0.125 * stats.speed) + 1)) + 0.5) * 100
+	if damaged:
+		motion = push_direction * 5000 * delta
 	move_and_slide(motion, Vector2(0,0))
+
+func attack(objects):
+	for o in objects:
+		var away_dir = ((o.position + o.get_parent().position) - self.position).normalized()
+		var damage = floor((1.2 * log(stats.strength + 1)) + 1) * 5
+		o.damage(damage, away_dir)
+
+func damage(amt, dir):
+	damaged = true
+
+	stats.health -= amt
+	if stats.health <= 0:
+		stats.health = 0
+		stats.status = 2
+	
+	push_direction = dir
