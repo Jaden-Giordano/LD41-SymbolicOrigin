@@ -3,6 +3,8 @@ extends Node
 export(String) var menu_scene
 export(String) var care_scene
 export(String) var dungeon_scene
+export(String) var settings_scene
+export(String) var pause_scene
 
 export(String) var food_inventory_scene
 var food_inv_scene_loaded
@@ -16,21 +18,27 @@ onready var stats = get_node("Stats")
 onready var inventory = get_node("Inventory")
 
 onready var food_icons = [simple_food, nutritious_food, vitamin_food, protein_food]
-var food_costs = [10, 50, 50, 50]
+var food_costs = [20, 25, 30, 35]
 var can_buy = true
 var inv_open = false
 
-var playing = false
+var pause_open = false
 
-func _input(event):
-	if event is InputEventAction:
-		if event.pressed and event.action == "ui_cancel":
-			_exit_dungeon()
+var playing = false
 
 func _ready():
 	food_inv_scene_loaded = load(food_inventory_scene)
 	add_child(load(menu_scene).instance())
 	get_node("StatsView").hide()
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel") && playing:
+		if pause_open:
+			remove_child(get_node("PauseMenu"))
+			pause_open = false
+		else:
+			add_child(load(pause_scene).instance())
+			pause_open = true
 
 # Care
 func _enter_dungeon():
@@ -111,10 +119,21 @@ func _menu_play():
 	playing = true
 
 func _menu_settings():
-	pass
+	if !playing:
+		remove_child(get_node("MainMenu"))
+	add_child(load(settings_scene).instance())
+
+func _on_settings_close():
+	remove_child(get_node("Settings"))
+	if !playing:
+		add_child(load(menu_scene).instance())
 
 func _menu_quit():
 	get_tree().quit()
+
+func _menu_resume():
+	remove_child(get_node("PauseMenu"))
+	pause_open = false
 
 # Universal
 func _on_force_out_dungeon():

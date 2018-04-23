@@ -32,7 +32,7 @@ func _process(delta):
 			if status == 0:
 				hunger += 0.25
 			elif status == 1:
-				hunger += 5
+				hunger += 10
 		hunger = clamp(hunger, 0, 100)
 
 		if hunger >= 100:
@@ -62,11 +62,12 @@ func eat_food(type):
 			speed -= 1
 			if speed <= 0: speed = 1
 		2: # Vitamins (Speed)
+			health += 5
 			hunger -= 100
 			speed += 3
 		3: # Protien (Strength)
 			hunger -= 100
-			speed -= 1
+			health += 10
 			strength += 2
 			if speed <= 0: speed = 1
 	

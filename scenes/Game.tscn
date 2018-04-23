@@ -14,12 +14,14 @@
 [ext_resource path="res://assets/sound/LD41BUTTONSCROLL.ogg" type="AudioStream" id=12]
 [ext_resource path="res://assets/sound/LD41BUTTONSELECT.ogg" type="AudioStream" id=13]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 menu_scene = "res://scenes/menu/MainMenu.tscn"
 care_scene = "res://scenes/care/CareFacility.tscn"
 dungeon_scene = "res://scenes/dungeon/Dungeon.tscn"
+settings_scene = "res://scenes/menu/Settings.tscn"
+pause_scene = "res://scenes/menu/PauseMenu.tscn"
 food_inventory_scene = "res://scenes/care/inventory/FoodInventory.tscn"
 simple_food = ExtResource( 2 )
 nutritious_food = ExtResource( 3 )
@@ -31,8 +33,8 @@ protein_food = ExtResource( 5 )
 script = ExtResource( 6 )
 hunger = 0
 max_health = 20
-speed = 5
-strength = 5
+speed = 1
+strength = 1
 color = Color( 0.460938, 1, 0.886292, 1 )
 coins = 10
 attack_push = 5000
