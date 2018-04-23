@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://hazards/MovingObject.gd" type="Script" id=1]
 [ext_resource path="res://assets/hazards.png" type="Texture" id=2]
+[ext_resource path="res://hazards/DamageArea.tscn" type="PackedScene" id=3]
 
-
-[node name="MovingObject" type="PathFollow2D" index="0"]
+[node name="MovingObject" type="PathFollow2D"]
 
 offset = 0.0
 h_offset = 0.0
@@ -23,5 +23,9 @@ texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 16, 32, 16, 16 )
 _sections_unfolded = [ "Region" ]
+
+[node name="DamageArea" parent="." index="1" instance=ExtResource( 3 )]
+
+damage_per_second = 2.5
 
 

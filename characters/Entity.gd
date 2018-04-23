@@ -116,9 +116,11 @@ func damage(amt, dir, from):
 		stats.health -= amt
 		if stats.health <= 0:
 			stats.health = 0
-			from.reward(stats.coins)
+			if from != null:
+				from.reward(stats.coins)
 		
-		push_direction = dir
+		if dir != null:
+			push_direction = dir
 
 		if get_name() == "Player":
 			invincible = true

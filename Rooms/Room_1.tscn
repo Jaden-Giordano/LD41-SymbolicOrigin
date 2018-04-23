@@ -26,9 +26,6 @@ _sections_unfolded = [ "Cell", "Transform" ]
 position = Vector2( 5, -55 )
 curve = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="MovingObject" parent="Path2D" index="0" instance=ExtResource( 2 )]
 
