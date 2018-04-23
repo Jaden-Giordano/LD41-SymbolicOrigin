@@ -7,6 +7,8 @@
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+boss_room_path = "res://rooms/Room_B.tscn"
+treasure_paths = PoolStringArray( "res://rooms/Room_T.tscn", "res://rooms/Room_T2.tscn" )
 paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_B.tscn" )
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
