@@ -95,6 +95,7 @@ func _exit_dungeon():
 	add_child(stats_view)
 	remove_child(get_node("Dungeon"))
 	add_child(load(care_scene).instance())
+	stats.reset()
 
 # Menu
 func _menu_play():

@@ -8,6 +8,7 @@ signal _strength_training_pressed
 signal _training_ended
 
 onready var stats = get_node("/root/Game/Stats")
+onready var current_training = get_node("CurrentTraining")
 
 func _ready():
 	connect("_enter_dungeon_pressed", get_parent(), "_enter_dungeon")
@@ -26,11 +27,18 @@ func _on_speed_training_pressed():
 	if stats.status == 0:
 		emit_signal("_speed_training_pressed")
 		get_node("SpeedTrainTimer").start()
+		current_training.set_text("Currently training speed!")
+		current_training.show()
 
 func _on_strength_training_pressed():
 	if stats.status == 0:
 		emit_signal("_strength_training_pressed")
 		get_node("StrengthTrainTimer").start()
+		current_training.set_text("Currently training strength!")
+		current_training.show()
 
 func _training_ended(type):
 	emit_signal("_training_ended", type)
+	current_training.hide()
+
+

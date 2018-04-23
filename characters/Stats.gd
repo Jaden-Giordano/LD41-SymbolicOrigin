@@ -60,6 +60,7 @@ func eat_food(type):
 			max_health += 5
 			health += 5
 			speed -= 1
+			if speed <= 0: speed = 1
 		2: # Vitamins (Speed)
 			hunger -= 100
 			speed += 2
@@ -67,8 +68,17 @@ func eat_food(type):
 			hunger -= 100
 			speed -= 1
 			strength += 2
+			if speed <= 0: speed = 1
 	
 	if status == 2: status = 0
 
 	hunger = clamp(hunger, 0, 100)
 	health = clamp(health, 0, max_health)
+
+func reset():
+	hunger = 0
+	strength = 1
+	speed = 1
+	max_health = 20
+	health = max_health
+	status = 0
