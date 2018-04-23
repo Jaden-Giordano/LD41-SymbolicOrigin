@@ -18,5 +18,3 @@ func _process(delta):
 	if get_tree().get_nodes_in_group("goal").size() == 0 and first:
 		first = false
 		emit_signal("_room_finished")
-
-
