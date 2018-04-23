@@ -14,7 +14,7 @@ extents = Vector2( 4, 6 )
 custom_solver_bias = 0.0
 radius = 10.194
 
-[node name="Character" type="KinematicBody2D" index="0"]
+[node name="Character" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -44,9 +44,9 @@ hunger = 0
 max_health = 20
 speed = 1
 strength = 1
+color = Color( 0, 0, 0, 1 )
 coins = 10
 attack_push = 5000
-player_invicibility_time = 1.5
 
 [node name="Anim" parent="." index="3" instance=ExtResource( 3 )]
 

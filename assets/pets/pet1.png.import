@@ -7,10 +7,10 @@ path="res://.import/pet1.png-5a2eef0b63c31f9747f91c4193ecf99f.stex"
 [deps]
 
 source_file="res://assets/pets/pet1.png"
-source_md5="361832945990074204d2326c81831888"
+source_md5="2658c23bb53afbf78f6eb05d86f783d0"
 
 dest_files=[ "res://.import/pet1.png-5a2eef0b63c31f9747f91c4193ecf99f.stex" ]
-dest_md5="c50b79d3a453696ec607307fd6e5bdbf"
+dest_md5="e0ff44807aee70f52c866cd1eb518460"
 
 [params]
 

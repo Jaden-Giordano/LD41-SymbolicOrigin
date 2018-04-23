@@ -1,11 +1,21 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=5 format=2]
+=======
+[gd_scene load_steps=8 format=2]
+>>>>>>> Stashed changes
 
 [ext_resource path="res://tilesets/DungeonTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://rooms/RoomManager.gd" type="Script" id=2]
 [ext_resource path="res://rooms/Door.tscn" type="PackedScene" id=3]
 [ext_resource path="res://tilesets/ObjectsTileset.tres" type="TileSet" id=4]
+<<<<<<< Updated upstream
+=======
+[ext_resource path="res://rooms/DoorBody.tscn" type="PackedScene" id=5]
+[ext_resource path="res://rooms/VerticalDoorBody.tscn" type="PackedScene" id=6]
+[ext_resource path="res://hazards/FloorButton.tscn" type="PackedScene" id=7]
+>>>>>>> Stashed changes
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap" type="TileMap" index="0"]
 
 mode = 0
 tile_set = ExtResource( 1 )
@@ -86,6 +96,45 @@ size_flags_vertical = 1
 color = Color( 0.14902, 0.121569, 0.121569, 1 )
 _sections_unfolded = [ "Visibility" ]
 
+<<<<<<< Updated upstream
+=======
+[node name="DoorBody" parent="." index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 184, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="DoorBody2" parent="." index="7" instance=ExtResource( 5 )]
+
+position = Vector2( -184, 0 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="DoorBody3" parent="." index="8" instance=ExtResource( 6 )]
+
+position = Vector2( 0, 136 )
+rotation = 1.5708
+_sections_unfolded = [ "Transform" ]
+
+[node name="DoorBody4" parent="." index="9" instance=ExtResource( 6 )]
+
+position = Vector2( 0, -136 )
+rotation = -1.5708
+_sections_unfolded = [ "Transform" ]
+
+[node name="FloorButton" parent="." index="10" instance=ExtResource( 7 )]
+
+position = Vector2( 48, 48 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="_room_finished" from="." to="DoorBody4" method="_on_room_finished"]
+
+[connection signal="_room_finished" from="." to="DoorBody" method="_on_room_finished"]
+
+[connection signal="_room_finished" from="." to="DoorBody2" method="_on_room_finished"]
+
+[connection signal="_room_finished" from="." to="DoorBody3" method="_on_room_finished"]
+
+>>>>>>> Stashed changes
 [connection signal="body_entered" from="RightDoor" to="." method="_door_entered" binds= [ 2 ]]
 
 [connection signal="body_entered" from="LeftDoor" to="." method="_door_entered" binds= [ 0 ]]

@@ -9,12 +9,22 @@
 custom_solver_bias = 0.0
 extents = Vector2( 4.39142, 6.38392 )
 
+<<<<<<< Updated upstream
 [node name="EnemyRandom" index="0" groups=[
+=======
+[node name="EnemyRandom" groups=[
+>>>>>>> Stashed changes
 "enemies",
+"goal",
 ] instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
+<<<<<<< Updated upstream
+=======
+sprite = 4
+invincible = false
+>>>>>>> Stashed changes
 timerMovement = true
 
 [node name="Body" parent="Position2D" index="0"]
@@ -31,7 +41,11 @@ autostart = true
 
 [node name="Stats" parent="." index="3"]
 
+<<<<<<< Updated upstream
 player_invicibility_time = 0.5
+=======
+color = Color( 0.417969, 1, 0.440704, 1 )
+>>>>>>> Stashed changes
 
 [node name="CollisionShape2D" parent="AttackRadius" index="0"]
 

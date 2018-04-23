@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hunger.png-c06aa422fb584b4a457e5094e095d1c7.stex"
+path="res://.import/hunger.png-c428a2366bfc214541eef70040fd5948.stex"
 
 [deps]
 
-source_file="res://assets/ui/hunger.png"
+source_file="res://assets/UI/hunger.png"
 source_md5="77550f7af140cbbfc945279d7fc8642e"
 
-dest_files=[ "res://.import/hunger.png-c06aa422fb584b4a457e5094e095d1c7.stex" ]
+dest_files=[ "res://.import/hunger.png-c428a2366bfc214541eef70040fd5948.stex" ]
 dest_md5="ea8ed4b38c07449fb4b7f41b9e15f1c7"
 
 [params]

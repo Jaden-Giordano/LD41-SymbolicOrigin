@@ -12,6 +12,12 @@ radius = 6.0
 [node name="Player" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+<<<<<<< Updated upstream
+=======
+sprite = 3
+color = Color( 1, 0.75415, 0.40625, 1 )
+invincible = false
+>>>>>>> Stashed changes
 attack_cooldown = 0.5
 attack_scene = "res://characters/player/AttackAnimation.tscn"
 
