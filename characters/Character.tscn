@@ -1,14 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/animated pets.png" type="Texture" id=1]
+[ext_resource path="res://assets/pets/pet3.png" type="Texture" id=1]
 [ext_resource path="res://characters/Stats.gd" type="Script" id=2]
+[ext_resource path="res://characters/Anim.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 6, 6 )
 
-[node name="Character" type="KinematicBody2D"]
+[node name="Character" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -21,9 +22,9 @@ _sections_unfolded = [ "Transform" ]
 [node name="Body" type="Sprite" parent="Position2D" index="0"]
 
 texture = ExtResource( 1 )
-vframes = 4
 hframes = 6
-_sections_unfolded = [ "Offset", "Transform" ]
+frame = 3
+_sections_unfolded = [ "Animation", "Offset", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
@@ -32,5 +33,7 @@ shape = SubResource( 1 )
 [node name="Stats" type="Node" parent="." index="2"]
 
 script = ExtResource( 2 )
+
+[node name="Anim" parent="." index="3" instance=ExtResource( 3 )]
 
 
