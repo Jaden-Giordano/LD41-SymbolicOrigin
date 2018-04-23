@@ -30,7 +30,7 @@ func _process(delta):
 		var attack_anim = attack_scene_loaded.instance()
 		get_parent().add_child(attack_anim)
 		get_node("../AttackAnimation").global_position = attack_point.global_position
-		print(get_node("../AttackAnimation").position)
+		get_node("../AttackAnimation/Anim").set_current_animation("Default")
 
 func _physics_process(delta):
 	movedir = Vector2(0, 0)

@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 points = PoolVector2Array( 0, -10, 20, 10, 0, 20, -20, 10 )
 
-[node name="Player" instance=ExtResource( 1 )]
+[node name="Player" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 attack_cooldown = 0.5
