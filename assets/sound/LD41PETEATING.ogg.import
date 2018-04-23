@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD41PETEATING.ogg-708795c43c541ffb64bc6c245ceac6b4.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/LD41PETEATING.ogg"
+source_md5="bf1584e315cd632e264bbc3c631737e8"
+
+dest_files=[ "res://.import/LD41PETEATING.ogg-708795c43c541ffb64bc6c245ceac6b4.oggstr" ]
+dest_md5="32672610cfcd2260d9bee41e94880dd4"
+
+[params]
+
+loop=false
+loop_offset=0

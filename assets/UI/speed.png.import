@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/speed.png-a6b8126573e61bf8728d623dc173afbf.stex"
+path="res://.import/speed.png-d505ed6f45940abe1bfc3685df8f7b32.stex"
 
 [deps]
 
-source_file="res://assets/ui/speed.png"
+source_file="res://assets/UI/speed.png"
 source_md5="dea1d4fbe0c765a28d7fe53570cee822"
 
-dest_files=[ "res://.import/speed.png-a6b8126573e61bf8728d623dc173afbf.stex" ]
+dest_files=[ "res://.import/speed.png-d505ed6f45940abe1bfc3685df8f7b32.stex" ]
 dest_md5="976d08b8f152371fa72fed38aceed899"
 
 [params]

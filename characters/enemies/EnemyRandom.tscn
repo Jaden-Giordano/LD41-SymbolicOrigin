@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/enemies/EnemyRandom.gd" type="Script" id=2]
 [ext_resource path="res://assets/pets/pet2.png" type="Texture" id=3]
+[ext_resource path="res://characters/EffectseEnemy.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -16,7 +17,8 @@ extents = Vector2( 4.39142, 6.38392 )
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
-sprite = 4
+sprite = 2
+invincible = false
 timerMovement = true
 
 [node name="Body" parent="Position2D" index="0"]
@@ -31,11 +33,18 @@ wait_time = 2.0
 one_shot = false
 autostart = true
 
-color = Color( 0.417969, 1, 0.440704, 1 )
+[node name="Stats" parent="." index="3"]
+
+max_health = 35
+color = Color( 0.631373, 1, 0.384314, 1 )
+coins = 5
+
 [node name="CollisionShape2D" parent="AttackRadius" index="0"]
 
 position = Vector2( -0.0198479, 1.96101 )
 shape = SubResource( 1 )
+
+[node name="Effects" parent="." index="6" instance=ExtResource( 4 )]
 
 [connection signal="timeout" from="MoveTimer" to="." method="_on_MoveTimer_timeout"]
 

@@ -101,16 +101,16 @@ func attack(objects):
 		var away_dir = ((o.position + o.get_parent().position) - self.position).normalized()
 		if o.get_name() == "Player":
 			away_dir = (o.position - (self.position + self.get_parent().position)).normalized()
-		
 		var damage = floor((1.2 * log(stats.strength + 1)) + 1) * 5
 		o.damage(damage, away_dir, self)
 
 func damage(amt, dir, from):
 	if !invincible:
 		damaged = true
-
+		$sound/hit.play()
 		stats.health -= amt
 		if stats.health <= 0:
+			get_node("/root/Game/death").play()
 			stats.health = 0
 			if from != null:
 				from.reward(stats.coins)
@@ -120,6 +120,8 @@ func damage(amt, dir, from):
 
 		if get_name() == "Player":
 			$Effects.set_current_animation("Invincible")
+		else:
+			$Effects.set_current_animation("Hurt")
 
 func reward(amt):
 	stats.coins += amt

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD41PETHAPPY.ogg-0b553260136b3436a021818243e51ab3.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/LD41PETHAPPY.ogg"
+source_md5="28f6ac8baf4a0c07ea204510de24a6f5"
+
+dest_files=[ "res://.import/LD41PETHAPPY.ogg-0b553260136b3436a021818243e51ab3.oggstr" ]
+dest_md5="aed6b121a05dde29cb0c0b0fb3084cc9"
+
+[params]
+
+loop=false
+loop_offset=0

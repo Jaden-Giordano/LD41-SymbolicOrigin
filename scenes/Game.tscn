@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://assets/foods/simple.png" type="Texture" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://characters/StatsView.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/sound/LD41DUNGEONDEMO.ogg" type="AudioStream" id=9]
 [ext_resource path="res://assets/sound/LD41PETCARE.ogg" type="AudioStream" id=10]
+[ext_resource path="res://assets/sound/LD41ENEMYHURT.ogg" type="AudioStream" id=11]
+[ext_resource path="res://assets/sound/LD41BUTTONSCROLL.ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/sound/LD41BUTTONSELECT.ogg" type="AudioStream" id=13]
 
 [node name="Game" type="Node" index="0"]
 
@@ -28,9 +31,9 @@ protein_food = ExtResource( 5 )
 script = ExtResource( 6 )
 hunger = 0
 max_health = 20
-speed = 1
-strength = 1
-color = Color( 1, 0.79248, 0.46875, 1 )
+speed = 5
+strength = 5
+color = Color( 0.460938, 1, 0.886292, 1 )
 coins = 10
 attack_push = 5000
 
@@ -53,7 +56,7 @@ stream = ExtResource( 9 )
 volume_db = -10.0
 autoplay = true
 mix_target = 0
-bus = "Master"
+bus = "Music"
 
 [node name="PetCareMusic" type="AudioStreamPlayer" parent="." index="5"]
 
@@ -61,7 +64,31 @@ stream = ExtResource( 10 )
 volume_db = -10.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "Music"
+
+[node name="death" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
+[node name="click1" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = ExtResource( 12 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
+[node name="click2" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = ExtResource( 13 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
 
 [connection signal="_force_out_dungeon" from="Stats" to="." method="_exit_dungeon"]
 
