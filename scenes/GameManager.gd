@@ -39,6 +39,7 @@ func _enter_dungeon():
 	var stats_view = get_node("StatsView")
 	remove_child(stats_view)
 	get_node("Dungeon/UI").add_child(stats_view)
+	stats.status = 0
 
 func _open_food_inventory():
 	if !inv_open:
@@ -91,7 +92,6 @@ func _exit_dungeon():
 	var stats_view = get_node("Dungeon/UI/StatsView")
 	get_node("Dungeon/UI").remove_child(stats_view)
 	add_child(stats_view)
-	stats.set_stats(get_node("Dungeon/Player/Stats"))
 	remove_child(get_node("Dungeon"))
 	add_child(load(care_scene).instance())
 

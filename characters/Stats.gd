@@ -38,31 +38,34 @@ func _process(delta):
 				hunger += 5
 		hunger = clamp(hunger, 0, 100)
 
-		if hunger == 100:
+		if hunger >= 100:
+			print(hunger_health_loss_timer)
 			hunger_health_loss_timer += delta
 			if hunger_health_loss_timer >= 1:
 				hunger_health_loss_timer = 0
-				if status == 0:
-					health -= 0.5
-		if health < 0:
+				health -= 0.5
+		if health <= 0:
 			health = 0
 			status = 2
 			emit_signal("_force_out_dungeon")
 
 func eat_food(type):
 	match type:
-		0: # Nutritious (Health)
+		0:
+			hunger -= 100
+			health += max_health / 4
+		1: # Nutritious (Health)
 			hunger -= 100
 			max_health += 5
 			health += 5
 			speed -= 1
-		1: # Vitamins (Speed)
+		2: # Vitamins (Speed)
 			hunger -= 100
-			speed += 1
-		2: # Protien (Strength)
+			speed += 2
+		3: # Protien (Strength)
 			hunger -= 100
 			speed -= 1
-			strength += 1
+			strength += 2
 	
 	hunger = clamp(hunger, 0, 100)
 	health = clamp(health, 0, max_health)
