@@ -9,7 +9,7 @@
 [ext_resource path="res://characters/Inventory.gd" type="Script" id=7]
 [ext_resource path="res://characters/StatsView.tscn" type="PackedScene" id=8]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 menu_scene = "res://scenes/menu/MainMenu.tscn"

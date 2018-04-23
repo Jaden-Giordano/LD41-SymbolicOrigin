@@ -49,6 +49,13 @@ func _process(delta):
 		get_node("Position2D/Body").flip_h = true
 	elif movedir.x == -1:
 		get_node("Position2D/Body").flip_h = false
+	
+	if get_groups().has("enemies"):
+		var bodies = []
+		for body in get_node("AttackRadius").get_overlapping_bodies():
+			if body.get_name() == "Player":
+				bodies.append(body)
+		attack(bodies)
 
 func rand():
 	var d = randi() % 8 + 1
@@ -95,22 +102,26 @@ func movement_loop(delta):
 func attack(objects):
 	for o in objects:
 		var away_dir = ((o.position + o.get_parent().position) - self.position).normalized()
+		if o.get_name() == "Player":
+			away_dir = (o.position - (self.position + self.get_parent().position)).normalized()
+		
 		var damage = floor((1.2 * log(stats.strength + 1)) + 1) * 5
 		o.damage(damage, away_dir, self)
 
 func damage(amt, dir, from):
-	damaged = true
+	if !invincible:
+		damaged = true
 
-	stats.health -= amt
-	if stats.health <= 0:
-		stats.health = 0
-		stats.status = 2
-		from.reward(stats.coins)
-	
-	push_direction = dir
+		stats.health -= amt
+		if stats.health <= 0:
+			stats.health = 0
+			stats.status = 2
+			from.reward(stats.coins)
+		
+		push_direction = dir
 
-	if get_name() == "Player":
-		invincible = true
+		if get_name() == "Player":
+			invincible = true
 
 func reward(amt):
 	stats.coins += amt
