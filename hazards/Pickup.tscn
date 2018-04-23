@@ -8,9 +8,11 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Pickup" type="Node2D"]
+[node name="Pickup" type="Node2D" index="0"]
 
+z_index = 1
 script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 health = 0
 hunger = 0
 speed = 0

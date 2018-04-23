@@ -15,7 +15,7 @@
 [ext_resource path="res://assets/sound/LD41BUTTONSELECT.ogg" type="AudioStream" id=13]
 [ext_resource path="res://scenes/DropFactory.gd" type="Script" id=14]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 menu_scene = "res://scenes/menu/MainMenu.tscn"
