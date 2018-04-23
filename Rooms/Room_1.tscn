@@ -31,6 +31,12 @@ _sections_unfolded = [ "Transform" ]
 
 rotation = -1.5708
 
+[node name="MovingObject2" parent="Path2D" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 80, -58.5926 )
+rotation = -1.5708
+offset = 150.0
+
 [node name="EnemyFollowing" parent="." index="6" instance=ExtResource( 3 )]
 
 position = Vector2( -120, -5 )

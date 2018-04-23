@@ -1,16 +1,23 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Rooms/Room_0.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/enemies/EnemyRandom.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/enemies/EnemyFollowing.tscn" type="PackedScene" id=3]
-[ext_resource path="res://hazards/MovingObject.tscn" type="PackedScene" id=4]
-[ext_resource path="res://hazards/FloorButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://hazards/FloorButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://hazards/MovingObject.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 102.322, -40.3, 0, 0, 0, 0, 105.024, 38.5928, 0, 0, 0, 0, -101.394, 38.0525, 0, 0, 0, 0, -101.715, -39.3844, 0, 0, 0, 0, 102.322, -40.3 )
+}
+
+[sub_resource type="Curve2D" id=2]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -152.398, -105.495, 0, 0, 0, 0, 153.235, -104.055, 0, 0, 0, 0, 150.84, 103.109, 0, 0, 0, 0, -152.721, 100.714, 0, 0, 0, 0, -152.398, -105.495 )
 }
 
 [node name="TileMap" index="0" instance=ExtResource( 1 )]
@@ -37,16 +44,48 @@ sprite = 1
 position = Vector2( 150.491, 114.301 )
 sprite = 1
 
-[node name="Path2D" type="Path2D" parent="." index="14"]
+[node name="FloorButton" parent="." index="14" instance=ExtResource( 4 )]
+
+position = Vector2( 0.0739975, -1.7711 )
+
+[node name="FloorButton2" parent="." index="15" instance=ExtResource( 4 )]
+
+position = Vector2( 0.0739975, -1.7711 )
+
+[node name="Path2D" type="Path2D" parent="." index="16"]
 
 curve = SubResource( 1 )
 
-[node name="MovingObject" parent="Path2D" index="0" instance=ExtResource( 4 )]
+[node name="MovingObject" parent="Path2D" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 102.322, -40.3 )
 
-[node name="FloorButton" parent="Path2D/MovingObject" index="2" instance=ExtResource( 5 )]
+[node name="MovingObject2" parent="Path2D" index="1" instance=ExtResource( 5 )]
 
-position = Vector2( -102.248, 38.5289 )
+position = Vector2( -98.2014, 38.0609 )
+offset = 280.0
+
+[node name="Path2D2" type="Path2D" parent="." index="17"]
+
+curve = SubResource( 2 )
+
+[node name="MovingObject" parent="Path2D2" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 150.982, 90.8166 )
+offset = 500.0
+
+[node name="MovingObject3" parent="Path2D2" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 147.755, -104.08 )
+offset = 300.0
+
+[node name="MovingObject4" parent="Path2D2" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( -138.395, 100.827 )
+offset = 800.0
+
+[node name="MovingObject2" parent="Path2D2" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( -152.398, -105.495 )
 
 

@@ -7,7 +7,7 @@
 [ext_resource path="res://rooms/DoorBody.tscn" type="PackedScene" id=5]
 [ext_resource path="res://rooms/VerticalDoorBody.tscn" type="PackedScene" id=6]
 
-[node name="TileMap" type="TileMap" index="0"]
+[node name="TileMap" type="TileMap"]
 
 mode = 0
 tile_set = ExtResource( 1 )
@@ -111,13 +111,13 @@ position = Vector2( 0, -136 )
 rotation = -1.5708
 _sections_unfolded = [ "Transform" ]
 
+[connection signal="_room_finished" from="." to="DoorBody" method="_on_room_finished"]
+
 [connection signal="_room_finished" from="." to="DoorBody3" method="_on_room_finished"]
 
 [connection signal="_room_finished" from="." to="DoorBody4" method="_on_room_finished"]
 
 [connection signal="_room_finished" from="." to="DoorBody2" method="_on_room_finished"]
-
-[connection signal="_room_finished" from="." to="DoorBody" method="_on_room_finished"]
 
 [connection signal="body_entered" from="RightDoor" to="." method="_door_entered" binds= [ 2 ]]
 

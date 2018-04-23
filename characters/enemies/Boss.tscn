@@ -174,7 +174,7 @@ radius = 21.5469
 custom_solver_bias = 0.0
 radius = 20.5612
 
-[node name="Boss" groups=[
+[node name="Boss" index="0" groups=[
 "goal",
 "enemies",
 ] instance=ExtResource( 1 )]
