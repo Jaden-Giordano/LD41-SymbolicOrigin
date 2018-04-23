@@ -7,14 +7,13 @@
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_1.tscn", "res://rooms/Room_2.tscn", "res://rooms/Room_3.tscn", "res://rooms/Room_4.tscn" )
+paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_B.tscn" )
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 1, 1 )
 z_index = 1
 _sections_unfolded = [ "Transform", "Z Index" ]
-invincible = false
 
 [node name="Camera2D" type="Camera2D" parent="." index="1"]
 
