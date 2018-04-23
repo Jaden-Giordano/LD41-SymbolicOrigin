@@ -1,19 +1,27 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Rooms/Room_0.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/enemies/Boss.tscn" type="PackedScene" id=2]
 [ext_resource path="res://hazards/DamageArea.tscn" type="PackedScene" id=3]
+[ext_resource path="res://hazards/MovingObject.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 7.33333, 7.951 )
 
+[sub_resource type="Curve2D" id=2]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -168.741, -120.188, 0, 0, 0, 0, 167.956, -120.188, 0, 0, 0, 0, 167.956, 118.801, 0, 0, 0, 0, -167.421, 118.361, 0, 0, 0, 0, -168.741, -120.188 )
+}
+
 [node name="TileMap" index="0" instance=ExtResource( 1 )]
 
 [node name="TileMap" parent="." index="4"]
 
-tile_data = PoolIntArray( -393221, 0, 0, -393213, 0, 0, -262152, 1, 0, -327678, 536870912, 0, -327677, 536870912, 0, -327673, 1, 0, -131078, 1, 0, -196603, 1, 0, 65528, 0, 0, 131063, 536870912, 0, 196602, 1, 0, 131077, 1, 0, 131081, 0, 0, 327672, 1, 0, 262151, 1, 0, 327681, 0, 0, 327682, 0, 0, 393218, 0, 0, 393219, 0, 0 )
+tile_data = PoolIntArray( -327683, 1, 0, -393214, 1, 0, -262152, 1, 0, -327673, 1, 0, -131078, 1, 0, -196603, 1, 0, 196602, 1, 0, 131077, 1, 0, 327672, 1, 0, 262151, 1, 0, 393213, 1, 0, 327682, 1, 0 )
 
 [node name="Boss" parent="." index="10" instance=ExtResource( 2 )]
 
@@ -60,5 +68,44 @@ shape = SubResource( 1 )
 
 position = Vector2( 118.943, -71.589 )
 shape = SubResource( 1 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="DamageArea" index="8"]
+
+position = Vector2( 40.4272, -87.1946 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="DamageArea" index="9"]
+
+position = Vector2( -41.0146, -88.17 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="DamageArea" index="10"]
+
+position = Vector2( -41.0146, 87.3933 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="DamageArea" index="11"]
+
+position = Vector2( 39.9396, 87.3933 )
+shape = SubResource( 1 )
+
+[node name="Path2D" type="Path2D" parent="." index="12"]
+
+curve = SubResource( 2 )
+
+[node name="MovingObject" parent="Path2D" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( -168.493, -75.4587 )
+offset = 1100.0
+
+[node name="MovingObject2" parent="Path2D" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 31.372, -120.188 )
+offset = 200.0
+
+[node name="MovingObject3" parent="Path2D" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 167.956, 44.5914 )
+offset = 500.0
 
 

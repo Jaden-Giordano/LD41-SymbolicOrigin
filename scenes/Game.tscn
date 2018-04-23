@@ -14,7 +14,7 @@
 [ext_resource path="res://assets/sound/LD41BUTTONSCROLL.ogg" type="AudioStream" id=12]
 [ext_resource path="res://assets/sound/LD41BUTTONSELECT.ogg" type="AudioStream" id=13]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 menu_scene = "res://scenes/menu/MainMenu.tscn"
@@ -33,8 +33,8 @@ protein_food = ExtResource( 5 )
 script = ExtResource( 6 )
 hunger = 0
 max_health = 20
-speed = 1
-strength = 1
+speed = 5
+strength = 5
 color = Color( 0.460938, 1, 0.886292, 1 )
 coins = 10
 attack_push = 5000
