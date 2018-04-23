@@ -13,8 +13,7 @@ var push_direction = Vector2(0, 0)
 var push_counter = 0
 var push_time = 0.2
 
-var invincible = false
-var invinc_counter = 0
+export var invincible = false
 
 var stats
 
@@ -35,12 +34,6 @@ func _process(delta):
 			damaged = false
 			push_direction = Vector2(0, 0)
 			push_counter = 0
-	
-	if invincible:
-		invinc_counter += delta
-		if invinc_counter >= stats.player_invicibility_time:
-			invincible = false
-			invinc_counter = 0
 
 	if movedir != Vector2(0,0):
 		anim_switch("Walk")
@@ -123,7 +116,7 @@ func damage(amt, dir, from):
 			push_direction = dir
 
 		if get_name() == "Player":
-			invincible = true
+			$Effects.set_current_animation("Invincible")
 
 func reward(amt):
 	stats.coins += amt
