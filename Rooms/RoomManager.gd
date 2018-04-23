@@ -13,6 +13,8 @@ func _ready():
 func _door_entered(body, direction):
 	if body.get_name() == "Player":
 		emit_signal("_door_trigger", direction)
+<<<<<<< Updated upstream
+=======
 
 func _process(delta):
 	if get_tree().get_nodes_in_group("goal").size() == 0 and first:

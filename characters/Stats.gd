@@ -8,6 +8,7 @@ export(int) var max_health = 20
 var health = 20
 export(int) var speed = 1
 export(int) var strength = 1
+export var color = Color()
 
 var status = 0 # 0 = Inactive, 1 = Active, 2 = Dead
 

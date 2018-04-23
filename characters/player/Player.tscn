@@ -43,7 +43,8 @@ tracks/1/keys = {
 [node name="Player" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
-invincible = false
+color = Color( 1, 0.75415, 0.40625, 1 )
+sprite = 3
 attack_cooldown = 0.5
 attack_scene = "res://characters/player/AttackAnimation.tscn"
 

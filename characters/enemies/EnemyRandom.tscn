@@ -10,13 +10,13 @@ custom_solver_bias = 0.0
 extents = Vector2( 4.39142, 6.38392 )
 
 [node name="EnemyRandom" groups=[
-"goal",
 "enemies",
+"goal",
 ] instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
-invincible = false
+sprite = 4
 timerMovement = true
 
 [node name="Body" parent="Position2D" index="0"]
@@ -31,6 +31,7 @@ wait_time = 2.0
 one_shot = false
 autostart = true
 
+color = Color( 0.417969, 1, 0.440704, 1 )
 [node name="CollisionShape2D" parent="AttackRadius" index="0"]
 
 position = Vector2( -0.0198479, 1.96101 )

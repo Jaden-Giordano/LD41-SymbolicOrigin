@@ -7,6 +7,7 @@ const up = Vector2(0,-1)
 const down = Vector2(0,1)
 var movedir = Vector2(0,0)
 var spritedir = "Down"
+export var sprite = 1
 
 var damaged = false
 var push_direction = Vector2(0, 0)
@@ -18,10 +19,12 @@ export var invincible = false
 var stats
 
 func _ready():
+	get_node("Position2D/Body").set_texture(load(String("res://assets/pets/pet"+String(sprite)+".png")))
 	if get_name() == "Player":
 		stats = get_node("/root/Game/Stats")
 	else:
 		stats = get_node("Stats")
+	modulate = stats.color
 
 func _physics_process(delta):
 	movement_loop(delta)

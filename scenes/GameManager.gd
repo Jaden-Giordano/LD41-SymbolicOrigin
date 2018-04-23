@@ -21,7 +21,7 @@ var can_buy = true
 var inv_open = false
 
 var playing = false
-	
+
 func _input(event):
 	if event is InputEventAction:
 		if event.pressed and event.action == "ui_cancel":
