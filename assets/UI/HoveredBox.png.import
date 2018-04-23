@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HoveredBox.png-588bf5498cdb08aa6a41e35f4188701a.stex"
+path="res://.import/HoveredBox.png-9f378e4a8e51d9b6d6d2c542c89bad7e.stex"
 
 [deps]
 
-source_file="res://assets/UI/HoveredBox.png"
+source_file="res://assets/ui/HoveredBox.png"
 source_md5="e925a9dcbd5c463cd7805c917ae94473"
 
-dest_files=[ "res://.import/HoveredBox.png-588bf5498cdb08aa6a41e35f4188701a.stex" ]
+dest_files=[ "res://.import/HoveredBox.png-9f378e4a8e51d9b6d6d2c542c89bad7e.stex" ]
 dest_md5="8a07e680aa0be064b4c526cbc6372a39"
 
 [params]

@@ -15,7 +15,7 @@
 [ext_resource path="res://assets/sound/LD41BUTTONSELECT.ogg" type="AudioStream" id=13]
 [ext_resource path="res://scenes/DropFactory.gd" type="Script" id=14]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 menu_scene = "res://scenes/menu/MainMenu.tscn"
@@ -96,7 +96,7 @@ bus = "SFX"
 [node name="DropFactory" type="Node" parent="." index="9"]
 
 script = ExtResource( 14 )
-pickups = PoolStringArray( "res://hazards/pickups/HealthPickup.tscn", "res://hazards/pickups/CoinsPickup.tscn" )
+pickups = PoolStringArray( "res://hazards/pickups/HealthPickup.tscn", "res://hazards/pickups/CoinsPickup.tscn", "res://hazards/pickups/CollarPickup.tscn", "res://hazards/pickups/SpeedPickup.tscn", "res://hazards/pickups/StrengthPickup.tscn" )
 
 [connection signal="_force_out_dungeon" from="Stats" to="." method="_exit_dungeon"]
 

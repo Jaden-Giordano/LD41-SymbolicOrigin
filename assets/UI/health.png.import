@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/health.png-af20844116265c76c8f319cdb7696714.stex"
+path="res://.import/health.png-c8e310077151d1ced46604f8ee9121ae.stex"
 
 [deps]
 
-source_file="res://assets/UI/health.png"
+source_file="res://assets/ui/health.png"
 source_md5="71b61ae38ef38445e3fbfc17f2828553"
 
-dest_files=[ "res://.import/health.png-af20844116265c76c8f319cdb7696714.stex" ]
+dest_files=[ "res://.import/health.png-c8e310077151d1ced46604f8ee9121ae.stex" ]
 dest_md5="f0f893d5118b969c0f701d081025f7a5"
 
 [params]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://hazards/Pickup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/foods/vitamin.png" type="Texture" id=2]
+
+[node name="Pickup" index="0" instance=ExtResource( 1 )]
+
+health = 10.0
+hunger = 50.0
+speed = 3
+
+[node name="Sprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
+
+

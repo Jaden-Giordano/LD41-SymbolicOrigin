@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/strength.png-2175e1c07fac83d9d01e68347526b88c.stex"
+path="res://.import/collar.png-32a43dcbd8a2a249a306781f1df99bf0.stex"
 
 [deps]
 
-source_file="res://assets/ui/strength.png"
-source_md5="38ccb26c086129d0be6402170a76efb6"
+source_file="res://assets/collar.png"
+source_md5="5d31a16b11ea5ade7ad7aa383e7dd843"
 
-dest_files=[ "res://.import/strength.png-2175e1c07fac83d9d01e68347526b88c.stex" ]
-dest_md5="75563ebd74001b77aeeaef6d45f2ca94"
+dest_files=[ "res://.import/collar.png-32a43dcbd8a2a249a306781f1df99bf0.stex" ]
+dest_md5="d73bf27e8c5e68085cc004b47b92ae9b"
 
 [params]
 
