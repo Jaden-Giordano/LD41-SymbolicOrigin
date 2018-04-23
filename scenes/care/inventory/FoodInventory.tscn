@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/foods/vitamin.png" type="Texture" id=5]
 [ext_resource path="res://assets/foods/protein.png" type="Texture" id=6]
 
-[node name="FoodInventory" type="Node" index="0"]
+[node name="FoodInventory" type="Node"]
 
 script = ExtResource( 1 )
 

@@ -35,7 +35,6 @@ func _ready():
 
 	# Load in the paths
 	for path in paths:
-		print(path)
 		loaded_scenes.append(load(path))
 	
 	load_room(Vector2(0, 0), 0)
