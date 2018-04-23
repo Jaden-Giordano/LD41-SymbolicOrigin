@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD41ENEMYHURT.ogg-728e49a148089909d4c529eed7399417.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/LD41ENEMYHURT.ogg"
+source_md5="914a7da6a2c5e9e2c905a75424d77306"
+
+dest_files=[ "res://.import/LD41ENEMYHURT.ogg-728e49a148089909d4c529eed7399417.oggstr" ]
+dest_md5="b4216ae569eac211950f55b00702571f"
+
+[params]
+
+loop=false
+loop_offset=0

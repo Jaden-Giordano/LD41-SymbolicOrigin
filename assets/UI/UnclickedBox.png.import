@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UnclickedBox.png-0030c8d32ee3be7f9deb52a28d5a63ac.stex"
+path="res://.import/UnclickedBox.png-9852870a8538cfef77900e5f90cf3a27.stex"
 
 [deps]
 
-source_file="res://assets/ui/UnclickedBox.png"
+source_file="res://assets/UI/UnclickedBox.png"
 source_md5="84303e98a97929f567eb9a1e17b01c93"
 
-dest_files=[ "res://.import/UnclickedBox.png-0030c8d32ee3be7f9deb52a28d5a63ac.stex" ]
+dest_files=[ "res://.import/UnclickedBox.png-9852870a8538cfef77900e5f90cf3a27.stex" ]
 dest_md5="ac288d702b276b4f9b9e1a7c4962fcf7"
 
 [params]

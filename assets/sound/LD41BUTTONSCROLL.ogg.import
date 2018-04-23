@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD41BUTTONSCROLL.ogg-b96c47945ba4f1f653d19699f22b96a1.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/LD41BUTTONSCROLL.ogg"
+source_md5="53956e7410809f1da856722d7a6ccc6a"
+
+dest_files=[ "res://.import/LD41BUTTONSCROLL.ogg-b96c47945ba4f1f653d19699f22b96a1.oggstr" ]
+dest_md5="6105aa277def5b02579961de76518a40"
+
+[params]
+
+loop=false
+loop_offset=0

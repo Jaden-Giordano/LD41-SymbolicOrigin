@@ -20,6 +20,7 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("attack") and !has_attacked:
 		attack_anim()
+		$sound/attack.play()
 		has_attacked = true
 		attack_counter = 0
 		var enemies = []

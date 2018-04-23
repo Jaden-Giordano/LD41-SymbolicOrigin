@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LD41CLAWATTACK.ogg-e424dda67c622402af9541c65cc38261.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/LD41CLAWATTACK.ogg"
+source_md5="dc6782f8f59f26a726b14cdc2f0ebe19"
+
+dest_files=[ "res://.import/LD41CLAWATTACK.ogg-e424dda67c622402af9541c65cc38261.oggstr" ]
+dest_md5="f4d19bff8cc82f3144f50373bc6175ac"
+
+[params]
+
+loop=false
+loop_offset=0

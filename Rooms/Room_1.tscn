@@ -38,6 +38,7 @@ position = Vector2( -120, -5 )
 [node name="EnemyRandom" parent="." index="7" instance=ExtResource( 4 )]
 
 position = Vector2( -105, 55 )
+sprite = 1
 
 [node name="EnemyRandom2" parent="." index="8" instance=ExtResource( 4 )]
 
@@ -46,5 +47,6 @@ position = Vector2( -40, -70 )
 [node name="EnemyFollowing2" parent="." index="9" instance=ExtResource( 3 )]
 
 position = Vector2( 100, -75 )
+sprite = 3
 
 
