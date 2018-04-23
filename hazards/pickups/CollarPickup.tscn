@@ -5,8 +5,8 @@
 
 [node name="Pickup" index="0" instance=ExtResource( 1 )]
 
-speed = 2
-strength = 2
+speed = 3
+strength = 3
 
 [node name="Sprite" parent="." index="1"]
 
