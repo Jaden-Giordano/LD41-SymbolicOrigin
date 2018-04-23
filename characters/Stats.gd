@@ -25,9 +25,6 @@ func _ready():
 	health = max_health
 
 func _process(delta):
-	if get_parent().get_groups().has("enemies") and status == 2:
-		get_node("../../").remove_child(get_parent())
-
 	if game.get_name() == "Game" && game.is_playing():
 		hunger_timer += delta
 		if hunger_timer >= 1:
@@ -43,11 +40,15 @@ func _process(delta):
 			if hunger_health_loss_timer >= 1:
 				hunger_health_loss_timer = 0
 				health -= 0.5
-		if health <= 0 && status != 2:
-			health = 0
-			status = 2
-			if get_parent().get_name() == "Game":
-				emit_signal("_force_out_dungeon")
+	if health <= 0 && status != 2:
+		health = 0
+		status = 2
+		if get_parent().get_name() == "Game":
+			emit_signal("_force_out_dungeon")
+
+func _physics_process(delta):
+	if get_parent().get_groups().has("enemies") and status == 2:
+		get_node("../../").remove_child(get_parent())
 
 func eat_food(type):
 	match type:
