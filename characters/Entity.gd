@@ -125,3 +125,12 @@ func damage(amt, dir, from):
 
 func reward(amt):
 	stats.coins += amt
+
+func pickup(health, hunger, speed, strength, coins):
+	stats.health += health
+	stats.health = clamp(stats.health, 0, stats.max_health)
+	stats.hunger -= hunger
+	stats.hunger = clamp(stats.hunger, 0, 100)
+	stats.speed += speed
+	stats.strength += strength
+	stats.coins += coins

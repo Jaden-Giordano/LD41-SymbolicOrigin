@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/menu/Settings.gd" type="Script" id=1]
 [ext_resource path="res://assets/theme.tres" type="Theme" id=2]
 
-[node name="Settings" type="Node"]
+[node name="Settings" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -158,16 +158,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label2" type="Label" parent="Display" index="4"]
+[node name="Instructions" type="Label" parent="Display" index="4"]
 
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -158.0
-margin_top = -157.0
-margin_right = 158.0
-margin_bottom = -50.0
+margin_top = -172.0
+margin_right = 162.0
+margin_bottom = -48.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -179,6 +179,7 @@ text = "Train your pet by clicking the training icons.
 Don't forget to feed your pet!
 Within the dungeon control your pet with
 WASD or Arrow keys and Space to attack.
+You can also you a controller (left stick and x).
 The dungeon is a dangerous place.
 We wish you good luck!"
 percent_visible = 1.0
