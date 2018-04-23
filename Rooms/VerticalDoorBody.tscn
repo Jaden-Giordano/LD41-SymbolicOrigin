@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://rooms/DoorBody.gd" type="Script" id=1]
+[ext_resource path="res://assets/tileset.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8, 16 )
+
+[node name="DoorBody" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Closed" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
+
+[node name="Door" type="Sprite" parent="Closed" index="0"]
+
+position = Vector2( 0, -8 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 32, 48, 16, 16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Door2" type="Sprite" parent="Closed" index="1"]
+
+position = Vector2( 0, 8 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 32, 48, 16, 16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Open" type="Node2D" parent="." index="1"]
+
+visible = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="2"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+

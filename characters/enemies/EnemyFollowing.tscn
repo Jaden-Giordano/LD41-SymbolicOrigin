@@ -9,11 +9,13 @@
 custom_solver_bias = 0.0
 extents = Vector2( 4.19225, 6.16889 )
 
-[node name="EnemyFollowing" groups=[
+[node name="EnemyFollowing" index="0" groups=[
+"goal",
 "enemies",
 ] instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+invincible = false
 
 [node name="Position2D" parent="." index="0"]
 
@@ -30,10 +32,6 @@ process_mode = 1
 wait_time = 0.4
 one_shot = false
 autostart = true
-
-[node name="Stats" parent="." index="3"]
-
-player_invicibility_time = 0.5
 
 [node name="CollisionShape2D" parent="AttackRadius" index="0"]
 

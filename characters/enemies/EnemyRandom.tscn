@@ -9,12 +9,14 @@
 custom_solver_bias = 0.0
 extents = Vector2( 4.39142, 6.38392 )
 
-[node name="EnemyRandom" index="0" groups=[
+[node name="EnemyRandom" groups=[
+"goal",
 "enemies",
 ] instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
+invincible = false
 timerMovement = true
 
 [node name="Body" parent="Position2D" index="0"]
@@ -28,10 +30,6 @@ process_mode = 1
 wait_time = 2.0
 one_shot = false
 autostart = true
-
-[node name="Stats" parent="." index="3"]
-
-player_invicibility_time = 0.5
 
 [node name="CollisionShape2D" parent="AttackRadius" index="0"]
 
