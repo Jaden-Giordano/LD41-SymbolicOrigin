@@ -25,6 +25,7 @@ func _on_feed_pressed():
 
 func _on_speed_training_pressed():
 	if stats.status == 0 and stats.hunger != 100:
+		get_node("/root/Game/wheel").play()
 		emit_signal("_speed_training_pressed")
 		get_node("SpeedTrainTimer").start()
 		current_training.set_text("Currently training speed!")
@@ -32,6 +33,7 @@ func _on_speed_training_pressed():
 
 func _on_strength_training_pressed():
 	if stats.status == 0 and stats.hunger != 100:
+		get_node("/root/Game/swim").play()
 		emit_signal("_strength_training_pressed")
 		get_node("StrengthTrainTimer").start()
 		current_training.set_text("Currently training strength!")
