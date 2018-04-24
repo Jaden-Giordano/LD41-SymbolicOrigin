@@ -17,7 +17,7 @@
 [ext_resource path="res://assets/sound/LD41SWIMMING.wav" type="AudioStream" id=15]
 [ext_resource path="res://scenes/DropFactory.gd" type="Script" id=16]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 start_scene = "res://scenes/menu/Start.tscn"
@@ -40,7 +40,7 @@ max_health = 20
 speed = 1
 strength = 1
 color = Color( 0.460938, 1, 0.886292, 1 )
-coins = 10
+coins = 20
 attack_push = 5000
 
 [node name="Inventory" type="Node" parent="." index="1"]
