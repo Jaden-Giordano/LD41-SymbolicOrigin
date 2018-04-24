@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://assets/foods/simple.png" type="Texture" id=2]
@@ -13,7 +13,9 @@
 [ext_resource path="res://assets/sound/LD41ENEMYHURT.ogg" type="AudioStream" id=11]
 [ext_resource path="res://assets/sound/LD41BUTTONSCROLL.ogg" type="AudioStream" id=12]
 [ext_resource path="res://assets/sound/LD41BUTTONSELECT.ogg" type="AudioStream" id=13]
-[ext_resource path="res://scenes/DropFactory.gd" type="Script" id=14]
+[ext_resource path="res://assets/sound/LD41HAMSTERWHEEL.ogg" type="AudioStream" id=14]
+[ext_resource path="res://assets/sound/LD41SWIMMING.wav" type="AudioStream" id=15]
+[ext_resource path="res://scenes/DropFactory.gd" type="Script" id=16]
 
 [node name="Game" type="Node"]
 
@@ -94,9 +96,25 @@ autoplay = false
 mix_target = 0
 bus = "SFX"
 
-[node name="DropFactory" type="Node" parent="." index="9"]
+[node name="wheel" type="AudioStreamPlayer" parent="." index="9"]
 
-script = ExtResource( 14 )
+stream = ExtResource( 14 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
+[node name="swim" type="AudioStreamPlayer" parent="." index="10"]
+
+stream = ExtResource( 15 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
+[node name="DropFactory" type="Node" parent="." index="11"]
+
+script = ExtResource( 16 )
 pickups = PoolStringArray( "res://hazards/pickups/HealthPickup.tscn", "res://hazards/pickups/CoinsPickup.tscn", "res://hazards/pickups/SpeedPickup.tscn", "res://hazards/pickups/StrengthPickup.tscn" )
 
 [connection signal="_force_out_dungeon" from="Stats" to="." method="_exit_dungeon"]

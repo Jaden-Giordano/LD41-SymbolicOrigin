@@ -42,7 +42,9 @@ tracks/1/keys = {
 
 [node name="Player" instance=ExtResource( 1 )]
 
+modulate = Color( 0.458824, 1, 0.886275, 1 )
 script = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 sprite = 3
 invincible = false
 attack_cooldown = 0.5

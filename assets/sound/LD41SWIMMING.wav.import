@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/LD41SWIMMING.wav-61d0fab92bc83f0ba57217a504a85717.sample"
+
+[deps]
+
+source_file="res://assets/sound/LD41SWIMMING.wav"
+source_md5="755cc0822018e01196db6cb1aeb56ac5"
+
+dest_files=[ "res://.import/LD41SWIMMING.wav-61d0fab92bc83f0ba57217a504a85717.sample" ]
+dest_md5="0bc0ac3b1902e4e65e1196795285136e"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

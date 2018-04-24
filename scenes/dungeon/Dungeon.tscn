@@ -3,19 +3,19 @@
 [ext_resource path="res://scenes/dungeon/DungeonManager.gd" type="Script" id=1]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=2]
 
-[node name="Dungeon" type="Node2D"]
+[node name="Dungeon" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 boss_room_path = "res://rooms/Room_B.tscn"
 treasure_paths = PoolStringArray( "res://rooms/Room_T.tscn", "res://rooms/Room_T2.tscn" )
-paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_B.tscn" )
+paths = PoolStringArray( "res://rooms/Room_0.tscn", "res://rooms/Room_1.tscn", "res://rooms/Room_2.tscn", "res://rooms/Room_3.tscn", "res://rooms/Room_4.tscn", "res://rooms/Room_5.tscn", "res://rooms/Room_6.tscn", "res://rooms/Room_7.tscn", "res://rooms/Room_8.tscn" )
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 1, 1 )
 z_index = 1
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="1"]
 
