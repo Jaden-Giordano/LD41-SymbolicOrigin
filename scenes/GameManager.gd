@@ -6,6 +6,7 @@ export(String) var care_scene
 export(String) var dungeon_scene
 export(String) var settings_scene
 export(String) var pause_scene
+export(String) var end_scene
 
 export(String) var food_inventory_scene
 var food_inv_scene_loaded
@@ -150,3 +151,9 @@ func _feed(type):
 
 func is_playing():
 	return playing
+
+func _end_game():
+	_exit_dungeon()
+	get_node("StatsView").hide()
+	remove_child(get_node("CareFacility"))
+	add_child(load(end_scene).instance())

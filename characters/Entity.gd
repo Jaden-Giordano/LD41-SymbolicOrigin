@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal _end_game
+
 const center = Vector2(0,0)
 const left = Vector2(-1,0)
 const right = Vector2(1,0)
@@ -25,6 +27,8 @@ func _ready():
 	else:
 		stats = get_node("Stats")
 	modulate = stats.color
+
+	connect("_end_game", get_node("/root/Game"), "_end_game")
 
 func _physics_process(delta):
 	movement_loop(delta)
@@ -112,6 +116,8 @@ func damage(amt, dir, from):
 		if stats.health <= 0:
 			get_node("/root/Game/death").play()
 			stats.health = 0
+			if get_name() == "Boss":
+				emit_signal("_end_game")
 			if from != null:
 				get_node("/root/Game/DropFactory").create_drop(self.global_position)
 		
