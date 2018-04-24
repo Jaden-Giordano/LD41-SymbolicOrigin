@@ -24,14 +24,14 @@ func _on_feed_pressed():
 	emit_signal("_feed_pressed")
 
 func _on_speed_training_pressed():
-	if stats.status == 0:
+	if stats.status == 0 and stats.hunger != 100:
 		emit_signal("_speed_training_pressed")
 		get_node("SpeedTrainTimer").start()
 		current_training.set_text("Currently training speed!")
 		current_training.show()
 
 func _on_strength_training_pressed():
-	if stats.status == 0:
+	if stats.status == 0 and stats.hunger != 100:
 		emit_signal("_strength_training_pressed")
 		get_node("StrengthTrainTimer").start()
 		current_training.set_text("Currently training strength!")
