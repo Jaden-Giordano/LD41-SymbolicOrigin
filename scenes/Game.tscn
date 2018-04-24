@@ -40,7 +40,7 @@ max_health = 20
 speed = 1
 strength = 1
 color = Color( 0.460938, 1, 0.886292, 1 )
-coins = 10
+coins = 20
 attack_push = 5000
 
 [node name="Inventory" type="Node" parent="." index="1"]

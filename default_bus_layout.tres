@@ -18,6 +18,6 @@ bus/2/name = "SFX"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
-bus/2/volume_db = -7.6
+bus/2/volume_db = -27.1
 bus/2/send = "Master"
 
