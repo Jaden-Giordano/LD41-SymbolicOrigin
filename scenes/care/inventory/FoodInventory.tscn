@@ -157,14 +157,14 @@ align = 1
 
 [node name="Label" type="Label" parent="." index="1"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 161.0
-margin_top = 105.0
-margin_right = 226.0
-margin_bottom = 127.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -40.0
+margin_right = 25.0
+margin_bottom = -18.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -180,14 +180,14 @@ _sections_unfolded = [ "Theme" ]
 
 [node name="Label2" type="Label" parent="." index="2"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 227.0
-margin_top = 105.0
-margin_right = 277.0
-margin_bottom = 144.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 27.0
+margin_top = -40.0
+margin_right = 77.0
+margin_bottom = -1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -204,14 +204,14 @@ _sections_unfolded = [ "Theme" ]
 
 [node name="Label3" type="Label" parent="." index="3"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 286.0
-margin_top = 105.0
-margin_right = 337.0
-margin_bottom = 144.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 86.0
+margin_top = -40.0
+margin_right = 137.0
+margin_bottom = -1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
