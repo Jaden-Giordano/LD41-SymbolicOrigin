@@ -1,5 +1,6 @@
 extends Node
 
+export(String) var start_scene
 export(String) var menu_scene
 export(String) var care_scene
 export(String) var dungeon_scene
@@ -28,8 +29,8 @@ var playing = false
 
 func _ready():
 	food_inv_scene_loaded = load(food_inventory_scene)
-	add_child(load(menu_scene).instance())
-	get_node("StatsView").hide()
+	add_child(load(start_scene).instance())
+	get_node("StatsView").hide()	
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel") && playing:
@@ -100,7 +101,6 @@ func _on_strength_train():
 # Dungeon
 func _exit_dungeon():
 	var stats_view = get_node("Dungeon/UI/StatsView")
-	print(stats_view)
 	get_node("Dungeon/UI").remove_child(stats_view)
 	add_child(stats_view)
 	remove_child(get_node("Dungeon"))
@@ -134,6 +134,11 @@ func _menu_quit():
 func _menu_resume():
 	remove_child(get_node("PauseMenu"))
 	pause_open = false
+
+func _menu_continued():
+	remove_child(get_node("Start"))
+	add_child(load(menu_scene).instance())
+	get_node("DungeonMusic").play()
 
 # Universal
 func _on_force_out_dungeon():

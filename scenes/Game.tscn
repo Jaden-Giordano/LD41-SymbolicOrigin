@@ -15,9 +15,10 @@
 [ext_resource path="res://assets/sound/LD41BUTTONSELECT.ogg" type="AudioStream" id=13]
 [ext_resource path="res://scenes/DropFactory.gd" type="Script" id=14]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
+start_scene = "res://scenes/menu/Start.tscn"
 menu_scene = "res://scenes/menu/MainMenu.tscn"
 care_scene = "res://scenes/care/CareFacility.tscn"
 dungeon_scene = "res://scenes/dungeon/Dungeon.tscn"
@@ -57,7 +58,7 @@ autostart = false
 
 stream = ExtResource( 9 )
 volume_db = -10.0
-autoplay = true
+autoplay = false
 mix_target = 0
 bus = "Music"
 
