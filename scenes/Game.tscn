@@ -17,7 +17,7 @@
 [ext_resource path="res://assets/sound/LD41SWIMMING.wav" type="AudioStream" id=15]
 [ext_resource path="res://scenes/DropFactory.gd" type="Script" id=16]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 start_scene = "res://scenes/menu/Start.tscn"

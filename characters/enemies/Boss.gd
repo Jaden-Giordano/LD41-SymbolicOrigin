@@ -2,6 +2,8 @@ extends "res://characters/Entity.gd"
 
 var playerPosition = Vector2()
 
+onready var stats = get_node("Stats")
+
 func _ready():
 	movedir = rand()
 

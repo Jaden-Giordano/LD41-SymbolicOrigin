@@ -93,11 +93,11 @@ func _door_entered(direction):
 
 		current_room += dir
 
-		if room_count == 5 or room_count == 10:
+		if room_count == 3 or room_count == 6:
 			if load_treasure(current_room):
 				get_node("Camera2D").position = current_room * MAP_POS_OFFSET
 				get_node("Player").position = (current_room * MAP_POS_OFFSET) + (-dir * Vector2(0.5, 0.375) * 325)
-		elif room_count == 15:
+		elif room_count == 9:
 			if load_boss(current_room):
 				get_node("Camera2D").position = current_room * MAP_POS_OFFSET
 				get_node("Player").position = (current_room * MAP_POS_OFFSET) + (-dir * Vector2(0.5, 0.375) * 325)
